@@ -1,6 +1,6 @@
 # Initial page
 
-![A complete microservice toolkit for .NET developers.](.gitbook/assets/logo.png)
+![A complete microservice toolkit for .NET developers.Enter a caption for this image \(optional\)](.gitbook/assets/2018-09-13_15.39.48.jpg.png)
 
 [github.com/vostok](https://github.com/vostok)
 
