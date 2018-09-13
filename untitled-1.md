@@ -1,2 +1,2 @@
-# Untitled
+# Interaction with other Vostok libraries
 
