@@ -9,7 +9,7 @@ using Vostok.Logging.Abstractions;
 using Vostok.Logging.Console;
 ```
 
-Create console log and output "Hello world!"
+Create smth and do nothing
 
 ```csharp
 var log = new ConsoleLog();
