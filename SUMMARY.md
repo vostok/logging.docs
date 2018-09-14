@@ -11,7 +11,6 @@
 * [Advanced usage](advanced-usage/README.md)
   * [UseCases](advanced-usage/usecases.md)
   * [Formatting](advanced-usage/untitled.md)
-  * [Untitled](advanced-usage/untitled-1.md)
 * [Warranties](warranties.md)
 * [Integration with SeriLog/Log4Net](integration-with-serilog-log4net.md)
 * [Interaction with other Vostok libraries](untitled-1.md)

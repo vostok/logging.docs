@@ -2,7 +2,7 @@
 
 ### ILog
 
-
+ Represents a log.
 
 ### LogLevel
 

@@ -12,17 +12,17 @@ Use **EventsLost** counter to see how many events were lost due to queue overflo
 Remember to **Dispos**e a **FileLog** instance when you no longer need it to close the file handle.  
 **Log** method never throws exceptions. On the other hand, **Flush** and **FlushAsync** may do so.
 
-some text
+Include Logging.File library in project:
 
 ```csharp
 using Vostok.Logging.File;
 ```
 
-smth
+ An ILog is created using FileLog:
 
 ```csharp
-var log = new FileLog();
+example
 ```
 
-smth
+
 
