@@ -1,28 +1,5 @@
 # UseCases
 
-### Configuring color-marked console messages 
-
-```csharp
-var log = new ConsoleLog(new ConsoleLogSettings
-{
-    ColorMapping = new Dictionary<LogLevel, ConsoleColor>
-    {
-        {LogLevel.Debug, (ConsoleColor)random.Next(16)},
-        {LogLevel.Info, (ConsoleColor)random.Next(16)},
-        {LogLevel.Warn, (ConsoleColor)random.Next(16)},
-        {LogLevel.Error, (ConsoleColor)random.Next(16)},
-        {LogLevel.Fatal, (ConsoleColor)random.Next(16)},
-    }
-});
-
-log.Debug("1");
-log.Info("2");
-log.Warn("3");
-log.Error("4");
-log.Fatal("5");
-ConsoleLog.Flush();
-```
-
 ### Adding context prefixes
 
 ```csharp
@@ -48,22 +25,6 @@ ILog log = new ConsoleLog(new ConsoleLogSettings
   ConsoleLog.Flush();
 ```
 
-### Synchronous logging to several files
-
-### Synchronous logging to file and console
-
-### Selected logging
-
-```csharp
-var log = new FileLog(new FileLogSettings
-{
-    FilePath = "log.txt",
-    EnabledLogLevels = new[] {
-    LogLevel.Warn, LogLevel.Error },
-});
-FileLog.FlushAll();
-```
-
 ### Messages output format configuration
 
 ```csharp
@@ -82,6 +43,45 @@ var log2 = new FileLog(new FileLogSettings
 
 log1.Info("One."); log2.Info("Two."); log1.Info("Three."); log2.Info("Four.");
 FileLog.FlushAll();
+```
+
+### Selected logging
+
+```csharp
+var log = new FileLog(new FileLogSettings
+{
+    FilePath = "log.txt",
+    EnabledLogLevels = new[] {
+    LogLevel.Warn, LogLevel.Error },
+});
+FileLog.FlushAll();
+```
+
+### Synchronous logging to several files
+
+### Synchronous logging to file and console
+
+### Configuring color-marked console messages 
+
+```csharp
+var log = new ConsoleLog(new ConsoleLogSettings
+{
+    ColorMapping = new Dictionary<LogLevel, ConsoleColor>
+    {
+        {LogLevel.Debug, (ConsoleColor)random.Next(16)},
+        {LogLevel.Info, (ConsoleColor)random.Next(16)},
+        {LogLevel.Warn, (ConsoleColor)random.Next(16)},
+        {LogLevel.Error, (ConsoleColor)random.Next(16)},
+        {LogLevel.Fatal, (ConsoleColor)random.Next(16)},
+    }
+});
+
+log.Debug("1");
+log.Info("2");
+log.Warn("3");
+log.Error("4");
+log.Fatal("5");
+ConsoleLog.Flush();
 ```
 
 
