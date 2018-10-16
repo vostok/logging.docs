@@ -9,19 +9,19 @@ ILog log = new ConsoleLog(new ConsoleLogSettings
         OutputTemplate = OutputTemplate.Default
     });
                   
-      log = log.WithContextualPrefix();
-       
-      using (new ContextualLogPrefix("op-1"))
+  log = log.WithContextualPrefix();
+   
+  using (new ContextualLogPrefix("op-1"))
+      {
+          log.Info("Message 1!");
+                  
+          using (new ContextualLogPrefix("op-2"))
           {
-              log.Info("Message 1!");
-                      
-              using (new ContextualLogPrefix("op-2"))
-              {
-                  log.Info("Message 2!");
-              }
-                      
-              log.Info("Message 3!");
+              log.Info("Message 2!");
           }
+                  
+          log.Info("Message 3!");
+      }
   ConsoleLog.Flush();
 ```
 
