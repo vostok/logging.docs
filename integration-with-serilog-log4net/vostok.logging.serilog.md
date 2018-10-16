@@ -15,21 +15,25 @@ It does this by following these rules:
 
 ### Example
 
-Допустим, используется Seriolog.
+Create an ILogger:
 
 ```csharp
-var log = new LoggerConfiguration()
+ILogger slog = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateLogger();
 ```
 
-Добавим восточный фасад:
+Create an adapter:
 
 ```csharp
-example
+ILog adapter = new SerilogLog(slog);
 ```
 
+Let's try to work with it as with Vostok's ILog:
 
+```csharp
+adapter.Warn("easy Vostok");
+```
 
 
 

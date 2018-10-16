@@ -20,6 +20,7 @@ log.Info("2");
 log.Warn("3");
 log.Error("4");
 log.Fatal("5");
+ConsoleLog.Flush();
 ```
 
 ### Adding context prefixes
@@ -60,6 +61,7 @@ var log = new FileLog(new FileLogSettings
     EnabledLogLevels = new[] {
     LogLevel.Warn, LogLevel.Error },
 });
+FileLog.FlushAll();
 ```
 
 ### Messages output format configuration
@@ -79,6 +81,7 @@ var log2 = new FileLog(new FileLogSettings
 });
 
 log1.Info("One."); log2.Info("Two."); log1.Info("Three."); log2.Info("Four.");
+FileLog.FlushAll();
 ```
 
 

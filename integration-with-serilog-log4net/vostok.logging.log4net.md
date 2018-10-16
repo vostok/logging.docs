@@ -37,16 +37,17 @@ public static class Logger
 
 ```csharp
 Logger.InitLogger();
-Logger.Log.Info("Old");
 ```
 
-Добавим восточный фасад:
+Create an adapter:
 
 ```csharp
-mxcmx,x,,lcmsl 
+adapter = new Log4netLog(log4netLogger);
 ```
 
+Let's try to work with it as with Vostok's ILog:
 
+```text
 
-
+```
 

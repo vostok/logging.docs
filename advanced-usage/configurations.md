@@ -3,7 +3,7 @@
 There are three ways to configure Vostok.  
 Create settings file.  
 Set settings provider.  
-Use Vostok.Configurations.
+Use Vostok.Configuration\(ссылка на отсутствующую документацию\).
 
 ```csharp
 // configure from code — settings instance
