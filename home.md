@@ -1,7 +1,3 @@
----
-description: набор библиотек Vostok.Logging
----
-
 # Home
 
 ## Libraries
