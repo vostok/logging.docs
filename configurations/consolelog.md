@@ -1,6 +1,9 @@
+---
+description: A log which outputs events to console.
+---
+
 # ConsoleLog
 
-A log which outputs events to console.  
 The implementation is asynchronous: logged messages are not immediately rendered and written to console. Instead, they are added to a queue which is processed by a background worker. 
 
 {% hint style="info" %}
@@ -13,7 +16,7 @@ Include Logging.Console library in project:
 using Vostok.Logging.Console;
 ```
 
- An ILog is created using  ConsoleLog:
+ An ILog is created using  `ConsoleLog`:
 
 ```csharp
 var log = new ConsoleLog();

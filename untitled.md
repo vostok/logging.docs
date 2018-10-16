@@ -1,8 +1,12 @@
+---
+description: This page includes the basic concepts of Vostok.Logging
+---
+
 # Basics
 
 ### ILog
 
- Represents a log.
+ Represents a log. 
 
 ### LogLevel
 
@@ -36,12 +40,7 @@ log.Info("Hello, {user}! Let's do {smth} today!", new {user="Alex", smth="nothin
 log.Error(new Exception("Unicorn die"), "Happy Hippo");
 ```
 
-* _**Properties**_ Contains various user-defined properties of the event. There are two kinds of properties: 1. Named properties. These should be set using logging extensions with the 'properties' argument. 2.Positional parameters. These should be set using logging extensions with the 'parameters' argument.
-
-```text
-examples
-```
-
+* _**Properties**_ Contains various user-defined properties of the event. There are two kinds of properties: 1. Named properties. These should be set using logging extensions with the 'properties' argument. 2.Positional parameters. These should be set using logging extensions with the 'parameters' argument. 
 * _**Exception**_ The error associated with this log event.
 
 
