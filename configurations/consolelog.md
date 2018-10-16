@@ -10,13 +10,13 @@ The implementation is asynchronous: logged messages are not immediately rendered
 The capacity of the queue can be changed via "UpdateGlobalSettings". In case of a queue overflow some events may be dropped.
 {% endhint %}
 
-Include Logging.Console library in project:
+Include `Logging.Console` library in project:
 
 ```csharp
 using Vostok.Logging.Console;
 ```
 
- An ILog is created using  `ConsoleLog`:
+ An `ILog` is created using  `ConsoleLog`:
 
 ```csharp
 var log = new ConsoleLog();

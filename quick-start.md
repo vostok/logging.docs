@@ -14,7 +14,7 @@ using Vostok.Logging.Console;
 Create a log using a `ConsoleLog()` :
 
 ```csharp
-var log = new ConsoleLog();
+Ilog log = new ConsoleLog();
             
 log.Info("Hello!");
 ```
