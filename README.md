@@ -14,7 +14,7 @@
 
 Vostok.Logging is a set of libraries.  
   
-If you use Vostok for logging only, you get major profit in perfomance.  
+If you use Vostok for logging only, you get major profit in performance.  
 Similar messages in console are written at speed ~ 23 000 mes/sec  
 different ~ 8 500 – 16 000 mes/sec
 
