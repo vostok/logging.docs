@@ -15,7 +15,7 @@ It does this by following these rules:
 
 ### Example
 
-Create an ILogger:
+Create an `ILogger`:
 
 ```csharp
 ILogger slog = new LoggerConfiguration()
@@ -32,7 +32,7 @@ ILog adapter = new SerilogLog(slog);
 Let's try to work with it as with Vostok's ILog:
 
 ```csharp
-adapter.Warn("easy Vostok");
+adapter.Info("Easy Vostok");
 ```
 
 

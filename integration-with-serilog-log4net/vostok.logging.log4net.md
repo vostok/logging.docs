@@ -15,39 +15,29 @@ It does this by following these rules:
 
 ### Example
 
-Допустим, используется Log4Net. 
+Create `ILog` with log4net. 
 
 ```csharp
-public static class Logger
-    {
-        private static ILog log = LogManager.GetLogger("LOGGER");
+private static readonly log4net.ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-
-        public static ILog Log
-        {
-            get { return log; }
-        }
-
-        public static void InitLogger()
-        {
-            XmlConfigurator.Configure();
-        }
-    }
-```
-
-```csharp
-Logger.InitLogger();
+static void Main(string[] args)
+{
+    var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+    XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+}
 ```
 
 Create an adapter:
 
 ```csharp
-adapter = new Log4netLog(log4netLogger);
+ILog adapter = new Log4netLog(log);
 ```
 
 Let's try to work with it as with Vostok's ILog:
 
-```text
-
+```csharp
+adapter.Warn("Let's use Vostok, please ^-^");
 ```
+
+
 
