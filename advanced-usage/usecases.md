@@ -68,19 +68,19 @@ var log = new ConsoleLog(new ConsoleLogSettings
 {
     ColorMapping = new Dictionary<LogLevel, ConsoleColor>
     {
-        {LogLevel.Debug, (ConsoleColor)random.Next(16)},
-        {LogLevel.Info, (ConsoleColor)random.Next(16)},
-        {LogLevel.Warn, (ConsoleColor)random.Next(16)},
-        {LogLevel.Error, (ConsoleColor)random.Next(16)},
-        {LogLevel.Fatal, (ConsoleColor)random.Next(16)},
+        {LogLevel.Debug, ConsoleColor.Red},
+        {LogLevel.Info, ConsoleColor.Cyan},
+        {LogLevel.Warn, ConsoleColor.DarkYellow},
+        {LogLevel.Error, ConsoleColor.Green},
+        {LogLevel.Fatal, ConsoleColor.Magenta},
     }
 });
-
-log.Debug("1");
-log.Info("2");
-log.Warn("3");
-log.Error("4");
-log.Fatal("5");
+    
+log.Debug("Red");
+log.Info("Cyan");
+log.Warn("DarkYellow");
+log.Error("Green");
+log.Fatal("Magenta");
 ConsoleLog.Flush();
 ```
 
