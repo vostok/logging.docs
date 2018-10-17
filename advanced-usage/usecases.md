@@ -1,3 +1,7 @@
+---
+description: Examples of using and individual settings
+---
+
 # UseCases
 
 ### Adding context prefixes

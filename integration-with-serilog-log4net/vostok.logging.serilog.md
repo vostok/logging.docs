@@ -4,7 +4,7 @@ description: Represents an adapter between Vostok logging interfaces and Serilog
 
 # Vostok.Logging.Serilog
 
-It implements Vostok ILog interface using an externally provided instance of Serilog ILogger.   
+Adapter implements Vostok ILog interface using an externally provided instance of Serilog ILogger.   
 It does this by following these rules:
 
 * Vostok LogLevel are directly translated to Serilog SerilogLevel;

@@ -30,9 +30,9 @@ log.Fatal("Critical errors");
 
 Event consists of a timestamp, a log message, a saved exception and user-defined properties.
 
-* _**Level**_ One of five level of the event: DEBUG, INFO, WARN, ERROR, FATAL. 
-* _**Timestamp**_ The timestamp of the event. Represents the time when the event was created, rather then the time when it was written to a file or processed in any other way. 
-* _**Message template**_ The template of the log message containing placeholders to be filled with values from properties. Can be null for events containing only exception.
+* **Level** _****_One of five level of the event: DEBUG, INFO, WARN, ERROR, FATAL. 
+* **Timestamp** The timestamp of the event. Represents the time when the event was created, rather then the time when it was written to a file or processed in any other way. 
+* **Message template** The template of the log message containing placeholders to be filled with values from properties. Can be null for events containing only exception.
 
 ```csharp
 log.Info("{0}.Logging!", "Vostok");
@@ -40,8 +40,8 @@ log.Info("Hello, {user}! Let's do {smth} today!", new {user="Alex", smth="nothin
 log.Error(new Exception("Unicorn die"), "Happy Hippo");
 ```
 
-* _**Properties**_ Contains various user-defined properties of the event. There are two kinds of properties: 1. Named properties. These should be set using logging extensions with the 'properties' argument. 2.Positional parameters. These should be set using logging extensions with the 'parameters' argument. 
-* _**Exception**_ The error associated with this log event.
+* **Properties** Contains various user-defined properties of the event. There are two kinds of properties: 1. Named properties. These should be set using logging extensions with the 'properties' argument. 2.Positional parameters. These should be set using logging extensions with the 'parameters' argument. 
+* **Exception** The error associated with this log event.
 
 
 

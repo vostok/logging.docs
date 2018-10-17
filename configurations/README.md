@@ -1,6 +1,6 @@
 # Implementations
 
-Library has 2 conventional log realisations
+Library has two standard log realizations
 
 * [**ConsoleLog**](consolelog.md) Logs output to console. 
 * \*\*\*\*[**FileLog**](filelog.md) Logs output to file.

@@ -4,7 +4,7 @@ description: Represents an adapter between Vostok logging interfaces and log4net
 
 # Vostok.Logging.Log4Net
 
-It implements Vostok ILog interface using an externally provided instance of log4net ILogger.  
+Adapter implements Vostok ILog interface using an externally provided instance of log4net ILogger.  
 It does this by following these rules:
 
 * LogLevels are directly translated to log4net Level;
