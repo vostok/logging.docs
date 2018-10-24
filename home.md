@@ -1,5 +1,5 @@
 ---
-description: Set of logging libraries
+description: Vostok.Logging is a set of libraries.
 ---
 
 # Home

@@ -1,26 +1,32 @@
+---
+description: 'http://vostok.tools'
+---
+
 # Initial page
-
-![A complete microservice toolkit for .NET developers.](.gitbook/assets/logo.png)
-
-[github.com/vostok](https://github.com/vostok)  
-[http://vostok.tools](http://vostok.tools)
 
 ## Vostok.Logging
 
-Vostok.Logging is a set of libraries.  
-  
-он используется для ... ... ...  
+Logging is a means of tracking events that occur during the operation of some processes.  
+Vostok.Logging like other libraries provides diagnostic logging to files, the console, and elsewhere.
 
 ### Features:
 
-* **Structured logging**  
-* **Fully asynchronous**  
-* **Flexible setting**  
-* **Fast work** Similar messages in console are written at speed ~ 23 000 mes/sec different ~ 8 500 – 16 000 mes/sec
+* **Structured logging** Log event consists of a timestamp, a log message, a saved exception and user-defined properties.
+
+```csharp
+var @event = new LogEvent(LogLevel.Info, DateTimeOffset.Now, "Hello, Vostok!");
+var template = OutputTemplate.Parse("{Level} {Message}");
+var result = LogEventFormatter.Format(@event, template);
+
+```
+
+* **Fully asynchronous** 
+* **Flexible setting** You can customize your logs. Examples are [here](advanced-usage/). 
+* **Fast work** Similar messages ~ 23 000 messages/sec Different ~ 8 500 – 16 000 messages/sec 
 * \*\*\*\*[**Integration with Serilog and Log4Net**](integration-with-serilog-log4net/) ****You can try Vostok right now. No need to translate the whole system to the Vostok at once. Just use an adapter. 
 
-Кроме этого, если в проекте использовать не только логирование, но и какое-то множество других "восточных" компонентов, вы получите профит в хорошей интеграции.  
-No worries about compatibility and other libraries  
-  
-\(But Vostok is not just one library, it's a toolbox. If you use several Vostok libraries, your profit is in good integration. .\)
+But Vostok is not just one library it's a toolbox. If you use several Vostok libraries, your profit is in good integration.  
+No worries about compatibility and other libraries.
+
+
 
