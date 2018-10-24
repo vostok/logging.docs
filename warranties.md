@@ -1,4 +1,0 @@
-# Warranties
-
-In progress
-

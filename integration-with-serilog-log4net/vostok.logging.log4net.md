@@ -8,7 +8,7 @@ Adapter implements Vostok ILog interface using an externally provided instance o
 It does this by following these rules:
 
 * LogLevels are directly translated to log4net Level;
-* Messages are prerendered into text as Vostok ILog's formatting syntax differs from log4net;
+* Messages are prerendered into text. \(Vostok ILog's formatting syntax differs from log4net\);
 * Properties are forwarded into log4net event's LoggingEvent.Properties;
 * ForContext with null argument returns a Log4netLog based on root logger from log4net's repository;
 * ForContext with non-null argument returns a Log4netLog based on logger with name equal to context value, obtained with ILoggerRepository.GetLogger;

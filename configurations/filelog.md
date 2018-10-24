@@ -25,5 +25,13 @@ var log = new FileLog(
     new FileLogSettings { FilePath = "log.txt" });
 ```
 
+Create logs
 
+```csharp
+log.INFO("1");
+log.DEBUG("2");
+log.WARN("3");
+
+FileLog.FlushAll();
+```
 

@@ -8,7 +8,7 @@ Adapter implements Vostok ILog interface using an externally provided instance o
 It does this by following these rules:
 
 * Vostok LogLevel are directly translated to Serilog SerilogLevel;
-* Messages are not prerendered into text as Vostok ILog's formatting syntax capabilities are a subset of those supported by Serilog;
+* Messages are not prerendered into text. \(Vostok's formatting syntax capabilities are a subset of those supported by Serilog\);
 * Message templates are parsed using ILogger.BindMessageTemplate;
 * Event properties are converted using ILogger.BindProperty;
 * ForContext invokes inner ILogger's ILogger.ForContext\(string,object,bool\) with name set to Constants.SourceContextPropertyNameand wraps resulting ILogger into another SerilogLog.
