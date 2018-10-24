@@ -12,7 +12,6 @@ If we can't write a log for any reason, the library will not throw an exception.
 
 ### Async input/output
 
-Returns instantly.  
 If we can't write a log for any reason, we put them in a buffer and deal with them later.
 
 ### **Bounded memory usage**
