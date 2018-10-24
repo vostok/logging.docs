@@ -13,26 +13,26 @@ ILog log = new ConsoleLog(new ConsoleLogSettings
         OutputTemplate = OutputTemplate.Default
     });
                   
-  log = log.WithContextualPrefix();
+log = log.WithContextualPrefix();
    
-  using (new ContextualLogPrefix("op-1"))
-      {
-          log.Info("Message 1!");
-                  
-          using (new ContextualLogPrefix("op-2"))
-          {
-              log.Info("Message 2!");
-          }
-                  
-          log.Info("Message 3!");
-      }
-  ConsoleLog.Flush();
+using (new ContextualLogPrefix("op-1"))
+{
+    log.Info("Message 1!");
+    
+    using (new ContextualLogPrefix("op-2"))
+    {
+        log.Info("Message 2!");
+    }               
+    
+    log.Info("Message 3!");
+}
+ConsoleLog.Flush();
 ```
 
 ### Messages output format configuration
 
 ```csharp
-var log1 = new FileLog(new FileLogSettings
+var log1 = new FileLog( new FileLogSettings
 {
     FilePath = "log.txt",
     OutputTemplate = OutputTemplate.Default
@@ -49,10 +49,10 @@ log1.Info("One."); log2.Info("Two."); log1.Info("Three."); log2.Info("Four.");
 FileLog.FlushAll();
 ```
 
-### Selected logging
+### Selective logging
 
 ```csharp
-var log = new FileLog(new FileLogSettings
+var log = new FileLog( new FileLogSettings
 {
     FilePath = "log.txt",
     EnabledLogLevels = new[] {
@@ -63,9 +63,33 @@ FileLog.FlushAll();
 
 ### Synchronous logging to several files
 
+```csharp
+
+```
+
 ### Synchronous logging to file and console
 
-### Configuring color-marked console messages 
+```csharp
+
+```
+
+### Rolling Strategy
+
+```csharp
+var log = new FileLog(new FileLogSettings
+{
+    FilePath = "log.txt",
+    RollingStrategy = new FileLogSettings.RollingStrategyOptions
+    {
+        MaxFiles = 3,
+        MaxSize = 50.Megabytes(),
+        Period = 2.Days(),
+        Type = RollingStrategyType.Hybrid
+    }
+});
+```
+
+### Color-marked console messages 
 
 ```csharp
 var log = new ConsoleLog(new ConsoleLogSettings
