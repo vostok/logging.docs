@@ -61,16 +61,23 @@ var log = new FileLog( new FileLogSettings
 FileLog.FlushAll();
 ```
 
-### Synchronous logging to several files
-
-```csharp
-
-```
-
 ### Synchronous logging to file and console
 
 ```csharp
-
+ILog log1 = new FileLog(
+    new FileLogSettings
+    {
+        FilePath = "l.log"
+    });
+            
+ILog log2 = new ConsoleLog();
+            
+CompositeLog composite = new CompositeLog(log1, log2);
+            
+composite.Info("test");
+            
+ConsoleLog.Flush();
+FileLog.FlushAll();
 ```
 
 ### Rolling Strategy
