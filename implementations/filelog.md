@@ -35,12 +35,6 @@ log.WARN("3");
 FileLog.FlushAll();
 ```
 
-
-
-
-
-
-
 ### Configurations
 
 There are three ways to configure Vostok:
@@ -60,5 +54,5 @@ var log2 = new FileLog(() => new FileLogSettings());
 var log3 = new FileLog(new JsonFileSource("log3.json"));
 ```
 
-### ConsoleLog
+### 
 

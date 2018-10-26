@@ -19,5 +19,7 @@ using Vostok.Logging.Console;
 var log = new ConsoleLog();
 ```
 
+### Configurations
+
 
 

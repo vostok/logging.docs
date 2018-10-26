@@ -11,7 +11,7 @@ PM> Install-Package Vostok.Logging.Console -Version 0.1.1-pre000051
 
 Browse the [Vostok.Logging tag on NuGet](https://www.nuget.org/packages?q=Vostok.Logging) to see more packages.
 
-## First usage
+##  SetUp
 
 Let's try Vostok and write a simple program.
 
@@ -37,8 +37,7 @@ Result:
 2018-09-11 13:45:00,162 INFO Hello!
 ```
 
-## Advanced usage
+## First usage
 
-* [UseCases]()
-* [Configurations]()
+
 

@@ -1,5 +1,5 @@
 ---
-description: The library does not affect the operation of the application.
+description: The library doesn't affect the operation of the application.
 ---
 
 # Guarantees

@@ -15,7 +15,7 @@ Vostok.Logging is a set of libraries.
 
 ### Logging.Abstractions
 
-This library is a facade with core logging interfaces and models \([ILog](untitled.md#ilog), [LogEvent](untitled.md#logevent), [LogLevel](untitled.md#loglevel)\) and a set of useful extensions.
+This library is a facade with core logging interfaces and models \([ILog](basics.md#ilog), [LogEvent](basics.md#logevent), [LogLevel](basics.md#loglevel)\) and a set of useful extensions.
 
 ### Logging.Console
 
