@@ -1,6 +1,17 @@
 # Quick Start
 
-### First usage
+## Installing from NuGet
+
+Dependencies: .NETStandart 2.0
+
+```aspnet
+PM> Install-Package Vostok.Logging.Abstractions -Version 0.1.1-pre000044
+PM> Install-Package Vostok.Logging.Console -Version 0.1.1-pre000051
+```
+
+Browse the [Vostok.Logging tag on NuGet](https://www.nuget.org/packages?q=Vostok.Logging) to see more packages.
+
+## First usage
 
 Let's try Vostok and write a simple program.
 
@@ -17,6 +28,7 @@ Create a log using a `ConsoleLog()` :
 Ilog log = new ConsoleLog();
             
 log.Info("Hello!");
+ConsoleLog.Flush();
 ```
 
 Result:
@@ -25,8 +37,8 @@ Result:
 2018-09-11 13:45:00,162 INFO Hello!
 ```
 
-### Advanced usage
+## Advanced usage
 
-* [UseCases](advanced-usage/usecases.md)
-* [Configurations](advanced-usage/configurations.md)
+* [UseCases]()
+* [Configurations]()
 

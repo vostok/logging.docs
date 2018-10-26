@@ -40,7 +40,7 @@ log.Info("Hello, {user}! Let's do {smth} today!", new {user="Alex", smth="nothin
 log.Error(new Exception("Unicorn die"), "Happy Hippo");
 ```
 
-* **Properties** Contains various user-defined properties of the event. There are two kinds of properties: 1. Named properties. These should be set using logging extensions with the 'properties' argument. 2.Positional parameters. These should be set using logging extensions with the 'parameters' argument. 
+* **Properties** Contains various user-defined properties of the event. There are two kinds of properties: 1. Named properties. 2.Positional parameters. 
 * **Exception** The error associated with this log event.
 
 

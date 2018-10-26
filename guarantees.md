@@ -22,7 +22,7 @@ Implementations are limited in the amount of memory they occupy. The buffer size
 
 If the application crashes, it can't send logs for a long time, log events will be lost.   
 We guarantee that one of these fine days this will happen and you lose your logs.  
-And we do not recommend building business processes that depend on log events.  
+And we don't recommend building business processes that depend on log events.  
   
   
 ****

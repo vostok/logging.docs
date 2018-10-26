@@ -1,8 +1,6 @@
----
-description: Examples of using and individual settings
----
+# Advanced usage
 
-# UseCases
+## UseCases
 
 ### Adding context prefixes
 
@@ -118,6 +116,8 @@ log.Error("Green");
 log.Fatal("Magenta");
 ConsoleLog.Flush();
 ```
+
+
 
 
 

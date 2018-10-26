@@ -9,8 +9,6 @@ It's not easy to move all at once. That's why we created this library.
 
 You can create Vostok's log interface and use it like Vostok. Everything inside will stay the same.
 
-\*можно тут картинку сделать\*
-
 ### [Vostok.Logging.Serilog](vostok.logging.serilog.md)
 
 ### [Vostok.Logging.Log4Net](vostok.logging.log4net.md)
