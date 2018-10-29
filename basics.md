@@ -23,7 +23,7 @@ Ilog logName = new ConsoleLog();
 Event consists of a level, a timestamp, a log message, a saved exception and user-defined properties.
 
 **Level**  
-One of five level of the event: Debug, Info, Warn, Error, Fatal.
+One of five level of the event:
 
 * **Debug** For verbose output. This log level should usually be ignored on production installations. ****
 * **Info** For neutral messages.
