@@ -5,15 +5,15 @@
 Dependencies: .NETStandart 2.0
 
 ```aspnet
-PM> Install-Package Vostok.Logging.Abstractions -Version 0.1.1-pre000044
-PM> Install-Package Vostok.Logging.Console -Version 0.1.1-pre000051
+PM> Install-Package Vostok.Logging.Abstractions -Version 0.1.1-pre000045
+PM> Install-Package Vostok.Logging.Console -Version 0.1.3-pre000069
 ```
 
 Browse the [Vostok.Logging tag on NuGet](https://www.nuget.org/packages?q=Vostok.Logging) to see more packages.
 
 ##  SetUp
 
-Let's try Vostok and write a simple program.
+Let's try Vostok and write a simple program. Работать будем с [ConsoleLog](implementations/consolelog.md).
 
 Include Vostok libraries in project:
 
@@ -38,6 +38,36 @@ Result:
 ```
 
 ## First usage
+
+Попробуем использовать консольный лог в простой задаче
+
+```csharp
+ILog log2 = new ConsoleLog();
+                       
+log2.Info("test");
+
+object o2 = null;  
+try  
+{  
+    log2.Debug("check");
+    int i2 = (int)o2; 
+}
+catch(Exception e)
+{
+    log2.Error("something wrong");
+}
+
+ConsoleLog.Flush();
+Console.ReadLine();
+```
+
+Result:
+
+```csharp
+2018-10-27 22:18:51,593 INFO  test
+2018-10-27 22:18:51,636 DEBUG check
+2018-10-27 22:18:51,638 ERROR something wrong
+```
 
 
 

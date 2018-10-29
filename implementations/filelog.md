@@ -28,16 +28,27 @@ var log = new FileLog(
 Create logs
 
 ```csharp
-log.INFO("1");
-log.DEBUG("2");
-log.WARN("3");
+log.Info("1");
+log.Debug("2");
+log.Warn("3");
 
 FileLog.FlushAll();
 ```
 
+Хорошо, у нас получилось записывать логи в файл. Попробуем теперь его настроить.  
+Для начала сделаем минимальный уровень логирования. Пусть это будет Warn:
+
+```text
+
+```
+
+Остальные примеры настройки восточных логов смотрите в разделе [Advanced Usage](../advanced-usage.md).
+
 ### Configurations
 
-There are three ways to configure Vostok:
+Выше мы рассмотрели несколько примеров настройки файлового лога из кода. Но это не единственный способ как можно построить этот процесс.
+
+There are three ways to configure Vostok's FileLog:
 
 * Create settings file;
 * Set settings provider;
