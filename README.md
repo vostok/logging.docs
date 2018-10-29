@@ -46,9 +46,9 @@ Represents an adapter between Vostok logging interfaces and Serilog.
 ## Features:
 
 * **Structured logging** Log event consists of a timestamp, a log message, a saved exception and user-defined properties. 
-* **Fully asynchronous** Что, зачем и что это дает 
-* **Flexible setting** Что зачем и как, ссылка на примеры 
-* **Fast work** Тут пруфы 
+* **Fully asynchronous**  
+* **Flexible setting**  
+* **Fast work**  
 * \*\*\*\*[**Integration with Serilog and Log4Net**](integration-with-serilog-log4net/) ****You can try Vostok right now. No need to translate the whole system to the Vostok at once. Just use an adapter. 
 
 But Vostok is not just one library it's a toolbox. If you use several Vostok libraries, your profit is in good integration.  
