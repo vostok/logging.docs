@@ -27,7 +27,7 @@ This library is for a log which outputs events to file. Supports rolling-strateg
 
 ### Logging.Context
 
-Automatically adds info to log messages from background context \(ссылка на доку, которой ещё нет\)
+Automatically adds info to log messages from background context.
 
 ### Logging.Formatting
 

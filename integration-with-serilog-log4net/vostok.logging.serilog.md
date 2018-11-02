@@ -4,15 +4,6 @@ description: Represents an adapter between Vostok logging interfaces and Serilog
 
 # Vostok.Logging.Serilog
 
-Adapter implements Vostok ILog interface using an externally provided instance of Serilog ILogger.   
-It does this by following these rules:
-
-* Vostok LogLevel are directly translated to Serilog SerilogLevel;
-* Messages are not prerendered into text. \(Vostok's formatting syntax capabilities are a subset of those supported by Serilog\);
-* Message templates are parsed using ILogger.BindMessageTemplate;
-* Event properties are converted using ILogger.BindProperty;
-* ForContext invokes inner ILogger's ILogger.ForContext\(string,object,bool\) with name set to Constants.SourceContextPropertyNameand wraps resulting ILogger into another SerilogLog.
-
 ### Example
 
 Create an `ILogger`:
@@ -36,4 +27,25 @@ adapter.Info("Easy Vostok");
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
+//
+
+Adapter implements Vostok ILog interface using an externally provided instance of Serilog ILogger.   
+It does this by following these rules:
+
+* Vostok LogLevel are directly translated to Serilog SerilogLevel;
+* Messages are not prerendered into text. \(Vostok's formatting syntax capabilities are a subset of those supported by Serilog\);
+* Message templates are parsed using ILogger.BindMessageTemplate;
+* Event properties are converted using ILogger.BindProperty;
+* ForContext invokes inner ILogger's ILogger.ForContext\(string,object,bool\) with name set to Constants.SourceContextPropertyNameand wraps resulting ILogger into another SerilogLog.
 
