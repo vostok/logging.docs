@@ -33,7 +33,7 @@ ConsoleLog.Flush();
 
 Result:
 
-```csharp
+```aspnet
 2018-09-11 13:45:00,162 INFO Hello!
 ```
 
@@ -58,12 +58,11 @@ catch(Exception e)
 }
 
 ConsoleLog.Flush();
-Console.ReadLine();
 ```
 
 Result:
 
-```csharp
+```aspnet
 2018-10-27 22:18:51,593 INFO  test
 2018-10-27 22:18:51,636 DEBUG check
 2018-10-27 22:18:51,638 ERROR something wrong
