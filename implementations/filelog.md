@@ -35,8 +35,7 @@ FileLog.FlushAll();
 ```csharp
 ILog flog = new FileLog(new FileLogSettings
 {
-    FilePath = Path.Combine($"{DateTime.Now:yyyy-MM-dd.HH-mm-ss}.log") 
-    
+    FilePath = Path.Combine($"{DateTime.Now:yyyy-MM-dd.HH-mm-ss}.log")     
 });
 ```
 
@@ -46,20 +45,22 @@ ILog flog = new FileLog(new FileLogSettings
 ILog flog = new FileLog(new FileLogSettings
 {
     FilePath = Path.Combine($"{DateTime.Now:yyyy-MM-dd.HH-mm-ss}.log"),
-    EnabledLogLevels = new [] {LogLevel.Error, LogLevel.Fatal},  
-    
+    EnabledLogLevels = new [] {LogLevel.Error, LogLevel.Fatal},      
 });
 ```
 
+Изменим кодировку:
 
-
-```text
-
+```csharp
+ILog flog = new FileLog(new FileLogSettings
+{
+    FilePath = Path.Combine($"{DateTime.Now:yyyy-MM-dd.HH-mm-ss}.log"),
+    EnabledLogLevels = new [] {LogLevel.Error, LogLevel.Fatal},
+    Encoding = Encoding.BigEndianUnicode
+});
 ```
 
-
-
-
+Примеры использования этих и других настроек смотрите в разделе [Advanced Usage](../advanced-usage.md).
 
 ### Configurations
 
@@ -101,22 +102,4 @@ var log3 = new FileLog(new JsonFileSource("log3.json"));
 * [**EventsQueueCapacity**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
 * [**EventsBufferCapacity**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
 * [**FileSettingsUpdateCooldown**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)\*\*\*\*
-
-
-
-
-
-
-
-
-
-//
-
-The implementation is asynchronous and thread-safe: logged messages are not immediately rendered and written to file. Instead, they are added to a lock-free queue which is processed by a background worker.  
-The capacity of the queue can be changed in settings if a settings provider is used. In case of a queue overflow some events may be dropped.
-
-  
-Use `EventsLost` counter to see how many events were lost due to queue overflow.  
-Remember to Dispose a FileLog instance when you no longer need it to close the file handle.  
-Log method never throws exceptions. On the other hand, `Flush` and `FlushAsync` may do so.
 
