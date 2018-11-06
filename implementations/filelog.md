@@ -4,8 +4,6 @@ description: A log which outputs events to a file.
 
 # FileLog
 
-файловый лог блаблабла–блаблаблабла
-
 Include `Logging.File` library in project:
 
 ```csharp
@@ -86,11 +84,23 @@ var log3 = new FileLog(new JsonFileSource("log3.json"));
 
 Пример конфигурационного файла:
 
+```text
+*тут я не умею, наверное*
+```
 
+### Settings
 
-
-
-
+* \*\*\*\*[**FilePath**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**OutputTemplate**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**FormatProvider**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**FileOpenMode**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**RollingStrategy**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**Encoding**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**OutputBufferSize**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**EnabledLogLevels**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**EventsQueueCapacity**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**EventsBufferCapacity**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
+* [**FileSettingsUpdateCooldown**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)\*\*\*\*
 
 
 
@@ -105,7 +115,7 @@ var log3 = new FileLog(new JsonFileSource("log3.json"));
 The implementation is asynchronous and thread-safe: logged messages are not immediately rendered and written to file. Instead, they are added to a lock-free queue which is processed by a background worker.  
 The capacity of the queue can be changed in settings if a settings provider is used. In case of a queue overflow some events may be dropped.
 
-Use `Flush` or `FlushAsync` to ensure that logged events are written to file.  
+  
 Use `EventsLost` counter to see how many events were lost due to queue overflow.  
 Remember to Dispose a FileLog instance when you no longer need it to close the file handle.  
 Log method never throws exceptions. On the other hand, `Flush` and `FlushAsync` may do so.

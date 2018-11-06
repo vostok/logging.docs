@@ -22,7 +22,10 @@ using Vostok.Logging.Abstractions;
 using Vostok.Logging.Console;
 ```
 
-Create a log using a `ConsoleLog()` :
+Create a log using a `ConsoleLog()`.   
+Создадим информационное сообщение с тексом "_Hello!_ ".  
+Чтобы всё заработало и мы увидели текст на консоли, добавим магическую строчку  
+`ConsoleLog.Flush();`
 
 ```csharp
 Ilog log = new ConsoleLog();
@@ -34,27 +37,29 @@ ConsoleLog.Flush();
 Result:
 
 ```aspnet
-2018-09-11 13:45:00,162 INFO Hello!
+2018-11-06 16:37:00,193 INFO  Hello!
 ```
 
 ## First usage
 
-Попробуем использовать консольный лог в простой задаче
+Попробуем использовать консольный лог в простой задаче  
+Построим ситуацию, в которой возникает `System.NullReferenceException` .  
+Попробуем выполнить каст null to int. Будем логировать все действия. Вместо того, чтобы упасть, выведем сообщение "_Something wrong_ " :
 
 ```csharp
-ILog log2 = new ConsoleLog();
+ILog log = new ConsoleLog();
                        
-log2.Info("test");
+log.Info("test");
 
 object o2 = null;  
 try  
 {  
-    log2.Debug("check");
+    log.Debug("check");
     int i2 = (int)o2; 
 }
 catch(Exception e)
 {
-    log2.Error("something wrong");
+    log.Error("something wrong");
 }
 
 ConsoleLog.Flush();
@@ -68,5 +73,6 @@ Result:
 2018-10-27 22:18:51,638 ERROR something wrong
 ```
 
-
+С помощью логирования мы получили полную информацию что и когда произошло.  
+Если сервис большой, логирование поможет локализовать проблему и возможно найти причинно-следственные связи.
 

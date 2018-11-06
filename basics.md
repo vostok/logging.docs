@@ -17,7 +17,7 @@ Represents a log.
 Ilog logName = new ConsoleLog();
 ```
 
-\*Подробнее о реализациях логах и их созданиии читайте в разделе [Implementations](implementations/).
+\*Подробнее о реализациях логов, их созданиии и настройке читайте в разделе [Implementations](implementations/).
 
 ### LogEvent
 
@@ -26,7 +26,7 @@ Event consists of a level, a timestamp, a log message, a saved exception and use
 **Level**  
 One of five level of the event:
 
-* **Debug** For verbose output. This log level should usually be ignored on production installations. ****
+* **Debug** For verbose output.
 * **Info** For neutral messages.
 * **Warn** For non-critical errors that don't interrupt the normal operation of the application.
 * **Error** For unexpected errors that may require human attention.
@@ -36,7 +36,7 @@ One of five level of the event:
 Represents the time when the event was created.
 
 **Message**  
-Текст, описание события
+Текст, описание события.
 
 **Properties**  
 Contains various user-defined properties of the event.
@@ -58,12 +58,12 @@ var event3 = event2.WithoutProperty("Author");
 var event4 = new LogEvent(LogLevel.Error, DateTimeOffset.Now, "", new Exception("my Exception"))
     .WithPropertyIfAbsent("Priority", 0);
     
-var clog = new ConsoleLog(new ConsoleLogSettings
+var consoleLog = new ConsoleLog(new ConsoleLogSettings
 {
     OutputTemplate = OutputTemplate.Parse("{TimeStamp:hh:mm:ss} {Message} {Priority} {Author} {Exception}{NewLine}")
 });
 
-var log = new CompositeLog(clog);
+var log = new CompositeLog(consoleLog);
 log.Log(event1);
 log.Log(event2);
 log.Log(event3);
@@ -83,13 +83,27 @@ Result:
 
 ### **Message Template**
 
-The template of the log message containing placeholders to be filled with values from properties.  
-Попробуем 
+The template of the log message containing placeholders to be filled with values from properties.
+
+Examples:
 
 ```csharp
+ILog log = new ConsoleLog();
+            
 log.Info("{0}.Logging!", "Vostok");
-log.Info("Hello, {user}! Let's do {smth} today!", new {user="Alex", smth="nothing"});
-log.Error(new Exception("Unicorn die"), "Happy Hippo");
+log.Info("\"Flowers for {hero}\" {author}", new {author="Daniel Keyes", hero="Algernon"});
+log.Error(new Exception("My exception"), "Something wrong");
+
+ConsoleLog.Flush();
+```
+
+Result:
+
+```aspnet
+2018-11-06 15:37:32,091 INFO  Vostok.Logging!
+2018-11-06 15:37:32,143 INFO  "Flowers for Algernon" Daniel Keyes
+2018-11-06 15:37:32,156 ERROR Something wrong
+System.Exception: My exception
 ```
 
 
