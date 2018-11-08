@@ -2,9 +2,11 @@
 description: Represents an adapter between Vostok logging interfaces and log4net.
 ---
 
-# Vostok.Logging.Log4Net
+# Vostok.Logging.Log4net
 
-### Example
+Если вы уже пользуетесь Log4net, но хотите попробовать Восточную реализацию, есть специальная библиотека [Vostok.Logging.Log4net](https://github.com/vostok/logging.log4net). С её помощью не придётся переписывать всё логирование. Создаете адаптер и получаете восточный фасад у имеющегося лога.
+
+### First usage
 
 Create `ILog` with log4net. 
 

@@ -10,6 +10,6 @@
 * [Advanced usage](advanced-usage.md)
 * [Integration with SeriLog/Log4Net](integration-with-serilog-log4net/README.md)
   * [Vostok.Logging.Serilog](integration-with-serilog-log4net/vostok.logging.serilog.md)
-  * [Vostok.Logging.Log4Net](integration-with-serilog-log4net/vostok.logging.log4net.md)
+  * [Vostok.Logging.Log4net](integration-with-serilog-log4net/vostok.logging.log4net.md)
 * [Interaction with other Vostok libraries](interaction-with-other-vostok-libraries.md)
 
