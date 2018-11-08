@@ -91,6 +91,8 @@ var log3 = new FileLog(new JsonFileSource("log3.json"));
 
 ### Settings
 
+Ниже всё, что можно настроить в файловом логе:
+
 * \*\*\*\*[**FilePath**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
 * [**OutputTemplate**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
 * [**FormatProvider**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
@@ -102,4 +104,6 @@ var log3 = new FileLog(new JsonFileSource("log3.json"));
 * [**EventsQueueCapacity**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
 * [**EventsBufferCapacity**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)
 * [**FileSettingsUpdateCooldown**](https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs)\*\*\*\*
+
+
 
