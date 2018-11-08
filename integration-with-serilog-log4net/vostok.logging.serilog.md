@@ -4,48 +4,105 @@ description: Represents an adapter between Vostok logging interfaces and Serilog
 
 # Vostok.Logging.Serilog
 
-### Example
+Если вы уже пользуетесь Serilog, но хотите попробовать Восточную реализацию, есть специальная библиотека [Vostok.Logging.Serilog](https://github.com/vostok/logging.serilog). С её помощью не придётся переписывать всё логирование. Создаете адаптер и получаете восточный фасад у имеющегося лога.
 
-Create an `ILogger`:
+### First usage
+
+Create an Serilog `ILogger`:
 
 ```csharp
-ILogger slog = new LoggerConfiguration()
+var log = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateLogger();
 ```
 
-Create an adapter:
+Create an adapter с которым будем работать дальше:
 
 ```csharp
-ILog adapter = new SerilogLog(slog);
+ILog adapter = new SerilogLog(log);
 ```
 
-Let's try to work with it as with Vostok's ILog:
+Let's try to work with it as with Vostok's ILog. Выведем какое-нибудь информационное сообщение:
 
 ```csharp
 adapter.Info("Easy Vostok");
 ```
 
+Заметим, что хоть мы и обращались с логом как с восточным, на консоль вывелася формат Serilog'а
 
+```aspnet
+[13:36:38 INF] Easy Vostok
+```
 
+### Example 1
 
+Попробуем сделать что-нибудь чуть более сложное.  
+Для начала создадим простой файловый лог:
 
+```csharp
+var fileLog = new FileLog(new FileLogSettings
+{
+    FilePath = "log.log"
+});
+```
 
+Теперь попробуем одновременно логировать информацию на консоль и в файл:
 
+```csharp
+var composite = new CompositeLog(fileLog, adapter);
 
+composite.Error("something wrong");
 
+fileLog.Flush();
+```
 
+В результате на консоли мы увидим информацию в формате Serilog, а в файле формат будет восточным
 
+```aspnet
+Console:
+[14:10:22 INF] Easy Vostok
+[13:36:39 ERR] Something wrong
 
+File:
+2018-11-08 13:36:39,119 ERROR Something wrong
+```
 
-//
+### Example 2
 
-Adapter implements Vostok ILog interface using an externally provided instance of Serilog ILogger.   
-It does this by following these rules:
+Ещё немного усложним предыдущий код и посмотрим что произойдет.  
+Создадим ивент с добавленными свойствами, обработаем его созданным `composite`:
 
-* Vostok LogLevel are directly translated to Serilog SerilogLevel;
-* Messages are not prerendered into text. \(Vostok's formatting syntax capabilities are a subset of those supported by Serilog\);
-* Message templates are parsed using ILogger.BindMessageTemplate;
-* Event properties are converted using ILogger.BindProperty;
-* ForContext invokes inner ILogger's ILogger.ForContext\(string,object,bool\) with name set to Constants.SourceContextPropertyNameand wraps resulting ILogger into another SerilogLog.
+```csharp
+ var event2 = new LogEvent(LogLevel.Info, DateTimeOffset.Now, "Show me text")    
+    .WithProperty("Priority", 2)    
+    .WithProperty("Author", "Service127");
+ 
+composite.Log(event2);
+```
+
+Настроим файловый лог:
+
+```csharp
+var fileLog = new FileLog(new FileLogSettings
+{
+    FilePath = "log.log",
+    OutputTemplate = OutputTemplate.Parse("{TimeStamp:hh:mm:ss} {Message} {Priority} {Author} {Exception}{NewLine}")
+});
+```
+
+В результате в консоли мы получим следующий вывод:
+
+```aspnet
+Console:
+[14:10:22 INF] Easy Vostok
+[14:10:22 ERR] Something wrong
+[14:10:22 INF] Show me text
+
+File:
+02:10:22 Something wrong   
+02:10:22 Show me text 2 Service127 
+```
+
+Настройки, которые были у начального лога Serilog сохранились, свойства не обработались.  
+Из-за того что мы изменили настройки  `fileLog` , в файле оказалась вся информация, переданная с логом, включая свойства.
 

@@ -7,7 +7,7 @@ description: The library doesn't affect the operation of the application.
 ### Errors
 
 An app doesn't get exceptions.  
-Library level errors do not reach an application level. Errors will be taken into account on library level. If log events can't be written for any reason \(for example, a file is closed\), the library will not throw an exception. Instead, the process will repeat later in the background.
+Library level errors don't reach an application level. Errors will be taken into account on library level. If log events can't be written for any reason \(for example, a file is closed\), the library will not throw an exception. Instead, the process will repeat later in the background.
 
 ### Async input/output
 
