@@ -22,7 +22,7 @@ Vostok.Logging is a set of libraries.
 | [Logging.Formatting](https://github.com/vostok/logging.formatting) | Rendering messages and events to document. Can be used in your realisations of text logging. |
 | [Logging.Log4Net](https://github.com/vostok/logging.log4net) | Represents an adapter between Vostok logging interfaces and log4net. |
 | [Logging.Serilog](https://github.com/vostok/logging.serilog) | Represents an adapter between Vostok logging interfaces and Serilog. |
-| [Logging.Hercules](https://github.com/vostok/logging.hercules) |  |
+| [Logging.Hercules](https://github.com/vostok/logging.hercules) | - |
 
 ## Features:
 
