@@ -78,10 +78,64 @@ Result:
 
 ### Settings
 
-* \*\*\*\*[**OutputTemplate**](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs)
-* [**FormatProvider**](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs)
-* [**ColorMapping**](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs)
-* [**ColorsEnabled**](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs)\*\*\*\*
+Что можно изменить в настройках консольного лога:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p></p>
+        <p></p>
+      </th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <p><a href="https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs"><b>OutputTemplate</b></a>
+        </p>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>used to render log messages</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <p><a href="https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs"><b>FormatProvider</b></a>
+        </p>
+      </td>
+      <td style="text-align:left">
+        <br />If specified, this IFormatProvider will be used when formatting log events.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <p><a href="https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs"><b>ColorMapping</b></a>
+        </p>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Mapping of log levels to text color in console</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <p><a href="https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs"><b>ColorsEnabled</b></a><b></b>
+        </p>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Specifies whether the console log must colorize text depending on the
+          log level</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 
