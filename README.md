@@ -13,35 +13,16 @@ Vostok.Logging like other libraries provides diagnostic logging to files, the co
 
 Vostok.Logging is a set of libraries. 
 
-### [Logging.Abstractions](https://github.com/vostok/logging.abstractions)
-
-This library is a facade with core logging interfaces and models \([ILog](basics.md#ilog), [LogEvent](basics.md#logevent), [LogLevel](basics.md#loglevel)\) and a set of useful extensions.
-
-### [Logging.Console](https://github.com/vostok/logging.console)
-
-This library is for a log which outputs events to console. Supports color-marked messages, uses lock-free queue for asynchronous message writing.
-
-### [Logging.File](https://github.com/vostok/logging.file)
-
-This library is for a log which outputs events to file. Supports rolling-strategies for logs rotation, uses lock-free queue for asynchronous message writing, easy to configure from code and other sources.
-
-### [Logging.Context](https://github.com/vostok/logging.context)
-
-Automatically adds info to log messages from background context.
-
-### [Logging.Formatting](https://github.com/vostok/logging.formatting)
-
-Rendering messages and events to document. Can be used in your realisations of text logging.
-
-### [Logging.Log4Net](https://github.com/vostok/logging.log4net)
-
-Represents an adapter between Vostok logging interfaces and log4net.
-
-### [Logging.Serilog](https://github.com/vostok/logging.serilog)
-
-Represents an adapter between Vostok logging interfaces and Serilog.
-
-### [Logging.Hercules](https://github.com/vostok/logging.hercules)
+| Library | Description |
+| :--- | :--- |
+| [Logging.Abstractions](https://github.com/vostok/logging.abstractions) | This library is a facade with core logging interfaces and models \([ILog](basics.md#ilog), [LogEvent](basics.md#logevent), [LogLevel](basics.md#loglevel)\) and a set of useful extensions. |
+| [Logging.Console](https://github.com/vostok/logging.console) | This library is for a log which outputs events to console. Supports color-marked messages, uses lock-free queue for asynchronous message writing. |
+| [Logging.File](https://github.com/vostok/logging.file) | This library is for a log which outputs events to file. Supports rolling-strategies for logs rotation, uses lock-free queue for asynchronous message writing, easy to configure from code and other sources. |
+| [Logging.Context](https://github.com/vostok/logging.context) | Automatically adds info to log messages from background context. |
+| [Logging.Formatting](https://github.com/vostok/logging.formatting) | Rendering messages and events to document. Can be used in your realisations of text logging. |
+| [Logging.Log4Net](https://github.com/vostok/logging.log4net) | Represents an adapter between Vostok logging interfaces and log4net. |
+| [Logging.Serilog](https://github.com/vostok/logging.serilog) | Represents an adapter between Vostok logging interfaces and Serilog. |
+| [Logging.Hercules](https://github.com/vostok/logging.hercules) |  |
 
 ## Features:
 
