@@ -38,7 +38,7 @@ One of five level of the event:
 Represents the time when the event was created.
 
 **Message**  
-Текст, описание события.
+Text, event description.
 
 **Properties**  
 Contains various user-defined properties of the event.
@@ -46,7 +46,7 @@ Contains various user-defined properties of the event.
 **Exception**  
 The error associated with this log event.
 
-Попробуем создать различные события:
+Let's try to create different events:
 
 ```csharp
 LogEvent event1 = new LogEvent(LogLevel.Debug, DateTimeOffset.Now, "Just do it");

@@ -19,14 +19,14 @@ using Vostok.Logging.Console;
 var log = new ConsoleLog();
 ```
 
-Теперь можем создать различные события.  
-Пусть это будет сообщение об ошибке
+Now you can create different events.  
+Let it be error message:
 
 ```csharp
 log.Error("Error number 1");
 ```
 
-Делать так можно сколько угодно раз:
+You can add as many events as you want: 
 
 ```csharp
 for (int i = 1; i <= 100; i++)
@@ -35,7 +35,7 @@ for (int i = 1; i <= 100; i++)
 }
 ```
 
-Чтобы увидеть результат, необходимо использовать `ConsoleLog.Flush()` или `ConsoleLog.FlushAsync()`. 
+To observe the result, add `ConsoleLog.Flush()` or `ConsoleLog.FlushAsync()`. 
 
 Result:
 
@@ -47,8 +47,8 @@ Result:
 
 ### First Usage
 
-Теперь попробуем настроить наш лог с помощью `ConsoleLogSettings` .   
-Например, изменим формат вывода логов. Будем выводить только время и текст сообщения. Весь остальной код оставим прежним:
+Let's try to configure a log and use `ConsoleLogSettings` for it.   
+For example, you can change output template. Будем выводить только время и текст сообщения. Весь остальной код оставим прежним:
 
 ```csharp
 var consoleLog = new ConsoleLog(new ConsoleLogSettings
