@@ -29,14 +29,14 @@ Create a log using a `ConsoleLog()`.
 ```csharp
 Ilog log = new ConsoleLog();
             
-log.Info("Hello!");
+log.Info("Hello, {user}!", "I-430");
 ConsoleLog.Flush();
 ```
 
 Result:
 
 ```aspnet
-2018-11-06 16:37:00,193 INFO  Hello!
+2018-11-06 16:37:00,193 INFO  Hello, I-430!
 ```
 
 ## First usage
@@ -53,7 +53,7 @@ log.Info("test");
 object o2 = null;  
 try  
 {  
-    log.Debug("check");
+    log.Debug("{check}");
     int i2 = (int)o2; 
 }
 catch(Exception e)
