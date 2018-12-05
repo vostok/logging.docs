@@ -78,7 +78,7 @@ Result:
 
 ### Settings
 
-Что можно изменить в настройках консольного лога:
+This parameters are adjusted in `ConsoleLogSettings`:
 
 <table>
   <thead>

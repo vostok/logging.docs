@@ -30,7 +30,7 @@ FileLog.FlushAll();
 
 Хорошо, у нас получилось записывать логи в файл. Попробуем теперь его настроить.
 
-Поработаем с названием файла, в который собираемся записывать логи. Пусть название файла будет содержать текущее время:
+Поработаем с названием файла, в который собираемся записывать логи. Let filename will contain the current time:
 
 ```csharp
 ILog flog = new FileLog(new FileLogSettings
@@ -39,7 +39,7 @@ ILog flog = new FileLog(new FileLogSettings
 });
 ```
 
-Выберем уровни логирования. Сообщения только этих уровней будем записывать в файл:
+Choose enabled log levels. We'll write in the file only these levels' messages:
 
 ```csharp
 ILog flog = new FileLog(new FileLogSettings
@@ -49,7 +49,7 @@ ILog flog = new FileLog(new FileLogSettings
 });
 ```
 
-Изменим кодировку:
+Change encoding:
 
 ```csharp
 ILog flog = new FileLog(new FileLogSettings
@@ -60,11 +60,11 @@ ILog flog = new FileLog(new FileLogSettings
 });
 ```
 
-Примеры использования этих и других настроек смотрите в разделе [Advanced Usage](../advanced-usage.md).
+See the section about [Advanced Usage](../advanced-usage.md) for samples of settings usage.
 
 ### Configurations
 
-Выше мы рассмотрели несколько примеров настройки файлового лога из кода. Но это не единственный способ как можно построить этот процесс.
+Above is an example of how to configure a FileLog from code. However, this is not the only way how we can build this process.
 
 There are three ways to configure Vostok's FileLog:
 
@@ -83,7 +83,7 @@ var log2 = new FileLog(() => new FileLogSettings());
 var log3 = new FileLog(new JsonFileSource("log3.json"));
 ```
 
-Пример конфигурационного файла:
+Sample configuration file :
 
 ```text
 *тут я не умею, наверное*
@@ -91,7 +91,7 @@ var log3 = new FileLog(new JsonFileSource("log3.json"));
 
 ### Settings
 
-Ниже всё, что можно настроить в файловом логе:
+These parameters are adjusted in `FileLogSettings`:
 
 <table>
   <thead>
