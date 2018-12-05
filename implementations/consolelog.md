@@ -6,7 +6,6 @@ description: A log which outputs events to console.
 
 ### SetUp
 
-Для работы с логом, выводящим информацию на консоль  
 Include `Logging.Console` library in project:
 
 ```csharp
@@ -48,7 +47,7 @@ Result:
 ### First Usage
 
 Let's try to configure a log and use `ConsoleLogSettings` for it.   
-For example, you can change output template. Будем выводить только время и текст сообщения. Весь остальной код оставим прежним:
+For example, you can change output template. The log would show only time stamp and message. We'll leave the rest of the code the same:
 
 ```csharp
 var consoleLog = new ConsoleLog(new ConsoleLogSettings
