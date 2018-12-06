@@ -4,22 +4,23 @@ description: This page includes the basic concepts of Vostok.Logging
 
 # Basics
 
-To work with library and understanding on the road ahead, библиотекой и понимания дальнейших примеров, познакомимся с событиями и интерфейсом восточных логов . Посмотрим как создавать одни и другие.
+To work with library and understanding on the road ahead, look at events and interfaces of Vostok's logs.   
+Let's see how to create all of it.
 
 ### ILog
 
 Represents a log. 
 
-Чтобы создать стандартный лог, достаточно написать 1 строчку кода.  
-В примере это будет лог, выводящий всю информацию на консоль\*. 
+Just type one code line to create standard log.  
+In our example, this will be a log which output events to console\*. 
 
 ```csharp
 Ilog logName = new ConsoleLog();
 ```
 
-\*Подробнее о реализациях логов, их созданиии и настройке читайте в разделе [Implementations](implementations/).
+\*Read more about logs' implementations, establishment and configurations in our [Implementations](implementations/) section.
 
-В `ILog` есть метод `Log`, который принимает в себя `logEvent`.
+`ILog` has method `Log` . Он принимает в себя `logEvent`.
 
 ### LogEvent
 
@@ -83,7 +84,7 @@ Result:
 02:47:08  0  System.Exception: my Exception
 ```
 
-Для удобства мы предлагаем пользоваться экстеншенами вместо метода `Log`.
+For your convenience, we recommend using extensions instead of method `Log`.
 
 ### **Message Template**
 

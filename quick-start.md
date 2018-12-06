@@ -11,9 +11,9 @@ PM> Install-Package Vostok.Logging.Console -Version 0.1.3-pre000069
 
 Browse the [Vostok.Logging tag on NuGet](https://www.nuget.org/packages?q=Vostok.Logging) to see more packages.
 
-##  SetUp
+## SetUp
 
-Let's try Vostok and write a simple program. Работать будем с [ConsoleLog](implementations/consolelog.md).
+Let's try Vostok and write a simple program. We'll [Console Log](implementations/consolelog.md)-work.
 
 Include Vostok libraries in project:
 
@@ -23,8 +23,8 @@ using Vostok.Logging.Console;
 ```
 
 Create a log using a `ConsoleLog()`.   
-Создадим информационное сообщение с тексом "_Hello!_ ".  
-Чтобы всё заработало и мы увидели текст на консоли, добавим `ConsoleLog.Flush();`
+Create Informational message with text "_Hello!_ ".  
+To make everything work and we have seen the text on the console add `ConsoleLog.Flush()` in your file:
 
 ```csharp
 Ilog log = new ConsoleLog();
@@ -41,9 +41,9 @@ Result:
 
 ## First usage
 
-Попробуем использовать консольный лог в простой задаче  
-Построим ситуацию, в которой возникает `System.NullReferenceException` .  
-Будем логировать все действия. Попробуем выполнить каст к int. Вместо того, чтобы упасть, выведем сообщение "_Something wrong_ " :
+Let's try to use `ConsoleLog` in a simple task.  
+Build a situation in which `System.NullReferenceException` happens.  
+We'll log all of the operations. Try to convert null to int. Rather than crash, show the message "Something wrong ":
 
 ```csharp
 ILog log = new ConsoleLog();
@@ -72,6 +72,6 @@ Result:
 2018-10-27 22:18:51,638 ERROR something wrong
 ```
 
-С помощью логирования мы получили полную информацию что и когда произошло.  
-Если сервис большой, логирование поможет локализовать проблему.
+We got the full information about time and consistency of operation from logging.  
+Logging will help you localise a problem if service is massive.
 

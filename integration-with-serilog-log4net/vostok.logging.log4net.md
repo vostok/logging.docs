@@ -4,7 +4,7 @@ description: Represents an adapter between Vostok logging interfaces and log4net
 
 # Vostok.Logging.Log4net
 
-Если вы уже пользуетесь Log4net, но хотите попробовать Восточную реализацию, есть специальная библиотека Vostok.Logging.Log4net. С её помощью не придётся переписывать всё логирование. Создаете адаптер и получаете восточный фасад у имеющегося лога.
+If you have already using Log4net, but want to try Vostok.Logging, we have specific library Vostok.Logging.Log4net. It won't be necessary for you to rewrite all logging with it. Create an adapter, and you get Vostok's facade of the available log.
 
 ### First usage
 
@@ -21,31 +21,31 @@ static void Main(string[] args)
 }
 ```
 
-Create an adapter с которым будем работать дальше:
+Create an adapter. We'll keep working with it:
 
 ```csharp
  var adapter = new Log4netLog(log);
 ```
 
-Let's try to work with it as with Vostok's ILog. Выведем какое-нибудь информационное сообщение:
+Let's try to work with it as with Vostok's ILog. Type any informational output message:
 
 ```csharp
 adapter.Info("test");
 ```
 
-Заметим, что хоть мы и обращались с логом как с восточным, на консоль вывелся формат Log4net'а:
+We shall notice, that we treated it like Vostok's log, but we see Log4net's format on the console:
 
 ```aspnet
 2018-11-09 11:59:06,776 INFO Log.Program - test
 ```
 
-Почему так произошло?  
-У нас был лог Log4net, мы построили адаптер, чтобы обращаться к этому логу как к восточному, но внутри всё осталось прежним.
+Why that is?  
+We had Log4net's log. And then we created an adapter for treating it like Vostok's log. But all inside remained the same. Therefore, we see Log4net's format on the console.
 
 ### Example 1
 
-Попробуем сделать что-нибудь чуть более сложное и доработаем первый пример.  
-Для начала создадим простой восточный файловый лог:
+Try to do something slightly more complicated. Let's complement the example above.  
+First of all, create a simple Vostok's file log:
 
 ```csharp
 var fileLog = new FileLog(new FileLogSettings
@@ -54,11 +54,11 @@ var fileLog = new FileLog(new FileLogSettings
 });
 ```
 
-Сейчас мы хотим построить такой лог, который позволит одновременно писать информацию в консоль и в файл.  
-У нас есть лог Log4net, который пишет в консоль, и восточный лог, который пишет в файл.  
-Не хватает только единого входа, чтобы логи писались одновремннно.  
-Для этого построим композитный лог и передадим ему fileLog и adapter.  
-Мы работаем с адаптером, потому что композитный лог принимает только восточные реализации.
+We would create a log which synchronous logging on the console and in a file.  
+We have Log4net's log which output events on console and we have Vostok's log which output events in the file.  
+We need a single entry point for synchronous logging.  
+Create a composite log for it. Pass fileLog и adapter in the composite.  
+We passe the adapter because composite accept only Vostok's implementations.
 
 ```csharp
 var composite = new CompositeLog(fileLog, adapter);
@@ -68,7 +68,7 @@ composite.Error("something wrong");
 fileLog.Flush();
 ```
 
-В результате в консоли мы увидим информацию в формате Log4net, а в файле формат будет восточным:
+The result will be such Log4net's formate in output on the console and Vostok's formate in the file:
 
 ```aspnet
 Console:
@@ -81,8 +81,8 @@ File:
 
 ### Example 2
 
-Ещё немного усложним предыдущий код и посмотрим что произойдет.  
-Создадим ивент с добавленными свойствами, передадим его в созданный `composite`:
+Let's a few more complicate the code above and see what's going.  
+Create an event with added properties. Pass it in `composite`:
 
 ```csharp
  var event2 = new LogEvent(LogLevel.Info, DateTimeOffset.Now, "Show me text")    
@@ -92,7 +92,7 @@ File:
 composite.Log(event2);
 ```
 
-Дополнительно настроим файловый лог, чтобы мы видели добавленные свойства:
+Additionally, configure `FileLog` to see added properties in the file:
 
 ```csharp
 var fileLog = new FileLog(new FileLogSettings
@@ -102,7 +102,7 @@ var fileLog = new FileLog(new FileLogSettings
 });
 ```
 
-В результате в консоли мы получим следующий вывод:
+The result will be such output on the console:
 
 ```aspnet
 Console:
@@ -115,6 +115,6 @@ File:
 12:03:35 Show me text 2 Service127 
 ```
 
-Настройки, которые были у начального лога Log4net сохранились, свойства не обработались.  
-Из-за того что мы изменили настройки  `fileLog` , в файле оказалась вся информация, переданная с логом, включая свойства.
+Log4net log's settings remained. Log didn't process properties.   
+We changed `FileLogSettings` and saw all the information about events and even properties in the file.
 

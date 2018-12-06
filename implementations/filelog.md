@@ -28,9 +28,9 @@ log.Warn("3");
 FileLog.FlushAll();
 ```
 
-Хорошо, у нас получилось записывать логи в файл. Попробуем теперь его настроить.
+Well, we managed to write logs to file. Let's try to configure log.
 
-Поработаем с названием файла, в который собираемся записывать логи. Let filename will contain the current time:
+Change filename. Let it will contain the current time:
 
 ```csharp
 ILog flog = new FileLog(new FileLogSettings

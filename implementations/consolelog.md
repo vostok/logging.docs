@@ -18,8 +18,7 @@ using Vostok.Logging.Console;
 var log = new ConsoleLog();
 ```
 
-Now you can create different events.  
-Let it be error message:
+Now you can create different events. Let it be error message:
 
 ```csharp
 log.Error("Error number 1");
@@ -73,7 +72,7 @@ Result:
 
 ### Configurations 
 
-Конфигурация консольного лога происходит в коде. Как мы это проделали в примере выше. 
+Console log's configuration passes in code \(the example above\). 
 
 ### Settings
 
