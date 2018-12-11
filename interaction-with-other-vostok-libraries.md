@@ -4,7 +4,7 @@ The main value of Vostok.Logging – integration with other Vostok's libraries.
 
 ### Logging + [Context](https://vostok.gitbook.io/context/)
 
-[Logging.Context](https://github.com/vostok/logging.context) enables us to say: "Let's automatic add properties from context to that log".  
+[Logging.Context](https://github.com/vostok/logging.context) enables us to say: "Let's automatically add properties from context to that log".  
 If you use `ContextualLogPrefix`, you can do so:
 
 ```csharp
