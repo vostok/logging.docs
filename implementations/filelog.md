@@ -4,6 +4,8 @@ description: A log which outputs events to a file.
 
 # FileLog
 
+### Set Up
+
 Include `Logging.File` library in project:
 
 ```csharp
@@ -17,14 +19,17 @@ var log = new FileLog(
     new FileLogSettings { FilePath = "log.txt" });
 ```
 
-Create logs  
-Use `Flush` or `FlushAsync` to ensure that logged events are written to file.
+Create logs
 
 ```csharp
 log.Info("1");
 log.Debug("2");
 log.Warn("3");
+```
 
+Use `Flush` or `FlushAsync` to ensure that logged events are written to file.
+
+```csharp
 FileLog.FlushAll();
 ```
 
