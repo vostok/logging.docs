@@ -81,10 +81,7 @@ This parameters are adjusted in `ConsoleLogSettings`:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">
-        <p></p>
-        <p></p>
-      </th>
+      <th style="text-align:left">Parameters</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>

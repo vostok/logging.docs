@@ -20,7 +20,7 @@ Ilog logName = new ConsoleLog();
 
 \*Read more about logs' implementations, establishment and configurations in our [Implementations](implementations/) section.
 
-`ILog` has method `Log` . Он принимает в себя `logEvent`.
+`ILog` has method `Log` . Method takes `logEvent`.
 
 ### LogEvent
 

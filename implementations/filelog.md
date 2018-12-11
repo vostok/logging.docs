@@ -66,11 +66,10 @@ See the section about [Advanced Usage](../advanced-usage.md) for samples of sett
 
 Above is an example of how to configure a FileLog from code. However, this is not the only way how we can build this process.
 
-There are three ways to configure Vostok's FileLog:
+There are two ways to configure Vostok's FileLog:
 
-* Create settings file;
-* Set settings provider;
-* Use Vostok.Configuration\(ссылка на отсутствующую документацию\)
+* create settings file;
+* set settings provider.
 
 ```csharp
 // configure from code — settings instance
@@ -96,7 +95,7 @@ These parameters are adjusted in `FileLogSettings`:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"></th>
+      <th style="text-align:left">Parameters</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>

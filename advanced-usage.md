@@ -1,6 +1,6 @@
 # Advanced usage
 
-## UseCases
+## Use сases
 
 ### Adding context prefixes
 
