@@ -19,7 +19,7 @@ var log = new FileLog(
     new FileLogSettings { FilePath = "log.txt" });
 ```
 
-Create logs
+Create logs:
 
 ```csharp
 log.Info("1");
@@ -27,7 +27,7 @@ log.Debug("2");
 log.Warn("3");
 ```
 
-Use `Flush` or `FlushAsync` to ensure that logged events are written to file.
+Use `Flush` or `FlushAsync` to ensure that logged events are written to file:
 
 ```csharp
 FileLog.FlushAll();
