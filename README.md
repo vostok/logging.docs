@@ -15,7 +15,7 @@ The second advantage of Vostok.Logging – [integration with other Vostok librar
 
 ## Features:
 
-* **Structured logging** Log event consists of a timestamp, a log message, a saved exception and user-defined properties. Если вы знакомы с  Serilog, вам будет привычно, если не знакомы, то тоже будет просто. The template of the log message containing placeholders to be filled with values from properties:
+* **Structured logging** Log event consists of a timestamp, a log message, a saved exception and user-defined properties. The template of the log message containing placeholders to be filled with values from properties:
 
 ```csharp
 ILog log = new ConsoleLog();
