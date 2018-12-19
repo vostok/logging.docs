@@ -9,9 +9,9 @@ description: 'http://vostok.tools'
 Logging is a means of tracking events that occur during the operation of some processes.  
 Vostok.Logging like other libraries provides diagnostic logging to files, the console, and elsewhere.
 
-The most important feature of Vostok.Logging is that the library doesn't affect the operation of the application. It means that app doesn't get exceptions to the library. For example, if you use Logging+Context, you can automatically add properties from context to logs.
+The most important feature of Vostok.Logging is that the library doesn't affect the operation of the application. It means that app doesn't get exceptions to the library.
 
-The second advantage of Vostok.Logging – [integration with other Vostok libraries](interaction-with-other-vostok-libraries.md). 
+The second advantage of Vostok.Logging – [integration with other Vostok libraries](interaction-with-other-vostok-libraries.md).  For example, if you use Logging+Context, you can automatically add properties from context to logs.
 
 ## Features:
 
