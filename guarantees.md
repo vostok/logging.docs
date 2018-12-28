@@ -10,7 +10,7 @@ If the log events cannot be written for any reason \(such as running out of disk
 
 ### Async input/output
 
-If log events can't be written for any reason, we put them in a buffer and deal with them later.
+If log events can't be written for any reason, we put them in a buffer and handle them later.
 
 ### **Bounded memory usage**
 

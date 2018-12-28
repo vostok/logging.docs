@@ -3,6 +3,7 @@
 * [Home](README.md)
 * [Guarantees](guarantees.md)
 * [Basics](basics.md)
+* [Syntax](syntax.md)
 * [Quick Start](quick-start.md)
 * [Implementations](implementations/README.md)
   * [ConsoleLog](implementations/consolelog.md)

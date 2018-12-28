@@ -4,30 +4,25 @@ description: This page includes the basic concepts of Vostok.Logging
 
 # Basics
 
-To work with library and understanding on the road ahead, look at events and interfaces of Vostok's logs.   
-Let's see how to create all of it.
+### [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs)
 
-### ILog
+Represents a log.   
+Implementations are expected to be thread-safe and never throw exceptions in any method.
 
-Represents a log. 
+`ILog` has three methods:
 
-Just type one code line to create standard log.  
-In our example, this will be a log which output events to console\*. 
+| Method | Description |
+| :--- | :--- |
+| Log | Logs the given `LogEvent`. |
+| IsEnabledFor | Returns whether the current log is configured to log events of the given `LogLevel`. |
+| ForContext | Returns a copy of the log operating in the given source context. |
 
-```csharp
-Ilog logName = new ConsoleLog();
-```
-
-\*Read more about logs' implementations, establishment and configurations in our [Implementations](implementations/) section.
-
-`ILog` has method `Log` . Method takes `logEvent`.
-
-### LogEvent
+### [LogEvent](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/LogEvent.cs)
 
 Event consists of a level, a timestamp, a log message, a saved exception and user-defined properties.
 
-**Level**  
-One of five level of the event:
+\*\*\*\*[**Level**](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/LogLevel.cs)  
+****One of five level of the event:
 
 * **Debug** For verbose output.
 * **Info** For neutral messages.
@@ -38,8 +33,9 @@ One of five level of the event:
 **Timestamp**  
 Represents the time when the event was created.
 
-**Message**  
-Text, event description.
+**Message template**  
+The template of the log message containing placeholders to be filled with values from.  
+A few examples can be found [here](syntax.md#message-template).
 
 **Properties**  
 Contains various user-defined properties of the event.
@@ -47,7 +43,36 @@ Contains various user-defined properties of the event.
 **Exception**  
 The error associated with this log event.
 
-Let's try to create different events:
+## 
+
+For your convenience, we recommend using extensions instead of methog `Log` .  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```csharp
 LogEvent event1 = new LogEvent(LogLevel.Debug, DateTimeOffset.Now, "Just do it");
@@ -82,35 +107,6 @@ Result:
 02:47:08 Show me text 2 Service127 
 02:47:08 Show me text 2  
 02:47:08  0  System.Exception: my Exception
-```
-
-For your convenience, we recommend using extensions instead of method `Log`.
-
-### **Message Template**
-
-The template of the log message containing placeholders to be filled with values from properties.
-
-Examples:
-
-```csharp
-ILog log = new ConsoleLog();
-            
-log.Info("{0}.Logging!", "Vostok");
-log.Info("\"Flowers for {hero}\" {author}", new {author="Daniel Keyes", hero="Algernon"});
-log.Error(new Exception("My exception"), "Something wrong");
-log.Debug("{one} two {text}", 1, "3");
-
-ConsoleLog.Flush();
-```
-
-Result:
-
-```aspnet
-2018-11-06 13:03:40,221 INFO  Vostok.Logging!
-2018-11-06 13:03:40,284 INFO  "Flowers for Algernon" Daniel Keyes
-2018-11-06 13:03:40,296 ERROR Something wrong
-System.Exception: My exception
-2018-11-06 13:03:40,297 DEBUG 1 two 3
 ```
 
 
