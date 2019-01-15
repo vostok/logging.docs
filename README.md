@@ -17,7 +17,7 @@ Vostok.Logging is not a monolith. The library consists of parts: facade and impl
 * **Fully asynchronous** Calling the `Log` method can't lock the app. 
 * **Fast work** \*proof\* 
 * \*\*\*\*[**Integration with Serilog and Log4Net**](integration-with-serilog-log4net/) ****If you are already using Serilog or Log4net, create an adapter and you'll get the Vostok facade from the available log.
-* 
+
 ## Libraries
 
 | Library | Description |
