@@ -1,8 +1,6 @@
----
-description: Guarantees of implementations of logs out of the box.
----
-
 # Guarantees
+
+Guarantees of [implementations](implementations/) of logs out of the box:
 
 ### Errors
 
@@ -10,7 +8,8 @@ If the log events cannot be written for any reason \(such as running out of disk
 
 ### Async input/output
 
-If log events can't be written for any reason, we put them in a buffer and handle them later.
+Calling the `Log` method can't lock the app.  
+Events are added to the buffer. The call to the Log method is always executed instantly. It does not matter whether the event can be recorded somewhere or not.
 
 ### **Bounded memory usage**
 

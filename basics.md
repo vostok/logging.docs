@@ -6,8 +6,8 @@ description: This page includes the basic concepts of Vostok.Logging
 
 ### [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs)
 
-Represents a log.   
-Implementations are expected to be thread-safe and never throw exceptions in any method.
+The main interface, represents a log.   
+There are two [standard log implementations](implementations/) in Vostok, developers use `ILog` to write their own implementations.
 
 `ILog` has three methods:
 
@@ -43,12 +43,11 @@ Contains various user-defined properties of the event.
 **Exception**  
 The error associated with this log event.
 
-## 
+{% hint style="info" %}
+You don't need to create LogEvent yourself, extensions do it for you.
 
-For your convenience, we recommend using extensions instead of methog `Log` .  
-
-
-
+Learn more about how to use extension syntax [here](syntax.md).
+{% endhint %}
 
 
 
