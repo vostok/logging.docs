@@ -17,7 +17,7 @@ _X_ – one of five log levels: Info, Debug, Warn, Error, Fatal.
 ### Template syntax
 
 The template "foo{0} {key}" and properties { '0': 'bar', 'key': 'baz' } produce the following output: "foobar baz".  
-Use double curly braces to escape curly braces in text: "{{key}}", new {key = "value"} --&gt; "{key}".  
+Use double curly braces to escape curly braces in text: "{{key}}", "key":"value"} --&gt; "{key}".  
 Any mismatched braces or nonexistent keys are kept as-is: "key1} {key2}", { 'key1': 'value' } --&gt; "key1} {key2}".
 
 ### Message Template
