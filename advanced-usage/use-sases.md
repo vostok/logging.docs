@@ -1,6 +1,4 @@
-# Advanced usage
-
-## Use сases
+# Use сases
 
 ### Adding context prefixes
 
@@ -116,8 +114,6 @@ log.Error("Green");
 log.Fatal("Magenta");
 ConsoleLog.Flush();
 ```
-
-
 
 
 

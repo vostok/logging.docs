@@ -43,7 +43,7 @@ Read more about syntax features, out-of-the-box implementations and advanced usa
 
 {% page-ref page="implementations/" %}
 
-{% page-ref page="advanced-usage.md" %}
+{% page-ref page="advanced-usage/" %}
 
 
 

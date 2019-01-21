@@ -13,9 +13,9 @@ There are two [standard log implementations](implementations/) in Vostok, develo
 
 | Method | Description |
 | :--- | :--- |
-| Log | Logs the given `LogEvent`. |
+| Log | Logs the given `LogEvent`. Read more about extensions [here](syntax.md#log-extensions). |
 | IsEnabledFor | Returns whether the current log is configured to log events of the given `LogLevel`. |
-| ForContext | Returns a copy of the log operating in the given source context. |
+| ForContext | Returns a copy of the log operating in the given source context. For details, see [Advanced usage](advanced-usage/custom-implementations.md#for-context). |
 
 ### [LogEvent](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/LogEvent.cs)
 
@@ -50,63 +50,6 @@ Learn more about how to use extension syntax [here](syntax.md).
 {% endhint %}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```csharp
-LogEvent event1 = new LogEvent(LogLevel.Debug, DateTimeOffset.Now, "Just do it");
-
-var event2 = new LogEvent(LogLevel.Info, DateTimeOffset.Now, "Show me text")
-    .WithProperty("Priority", 2)
-    .WithProperty("Author", "Service127");
-
-var event3 = event2.WithoutProperty("Author");
-    
-var event4 = new LogEvent(LogLevel.Error, DateTimeOffset.Now, "", new Exception("my Exception"))
-    .WithPropertyIfAbsent("Priority", 0);
-    
-var consoleLog = new ConsoleLog(new ConsoleLogSettings
-{
-    OutputTemplate = OutputTemplate.Parse("{TimeStamp:hh:mm:ss} {Message} {Priority} {Author} {Exception}{NewLine}")
-});
-
-var log = new CompositeLog(consoleLog);
-log.Log(event1);
-log.Log(event2);
-log.Log(event3);
-log.Log(event4);
-
-ConsoleLog.Flush();
-```
-
-Result:
-
-```aspnet
-02:47:08 Just do it   
-02:47:08 Show me text 2 Service127 
-02:47:08 Show me text 2  
-02:47:08  0  System.Exception: my Exception
-```
 
 
 

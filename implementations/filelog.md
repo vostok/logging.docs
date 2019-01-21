@@ -65,7 +65,7 @@ ILog flog = new FileLog(new FileLogSettings
 });
 ```
 
-See the section about [Advanced Usage](../advanced-usage.md) for samples of settings usage.
+See the section about [Advanced Usage](../advanced-usage/) for samples of settings usage.
 
 ### Configurations
 
