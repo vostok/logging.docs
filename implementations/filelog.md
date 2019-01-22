@@ -12,7 +12,7 @@ Include `Logging.File` library in project:
 using Vostok.Logging.File;
 ```
 
- An `ILog` is created using `FileLog`:
+ An `ILog` is created using the `FileLog`:
 
 ```csharp
 var log = new FileLog(
@@ -33,9 +33,7 @@ Use `Flush` or `FlushAsync` to ensure that logged events are written to file:
 FileLog.FlushAll();
 ```
 
-Well, we managed to write logs to file. Let's try to configure log.
-
-Change filename. Let it will contain the current time:
+Configure the log. For example, change the file name. Let it contain the current time:
 
 ```csharp
 ILog flog = new FileLog(new FileLogSettings
@@ -44,7 +42,7 @@ ILog flog = new FileLog(new FileLogSettings
 });
 ```
 
-Choose enabled log levels. We'll write in the file only these levels' messages:
+Choose enabled log levels. Only messages of these levels will be written to the file:
 
 ```csharp
 ILog flog = new FileLog(new FileLogSettings
@@ -69,7 +67,7 @@ See the section about [Advanced Usage](../advanced-usage/) for samples of settin
 
 ### Configurations
 
-Above is an example of how to configure a FileLog from code. However, this is not the only way how we can build this process.
+The above is an example of how to configure a log file from code. However, this is not the only way to build this process.
 
 There are two ways to configure Vostok's FileLog:
 
@@ -114,7 +112,7 @@ These parameters are adjusted in `FileLogSettings`:
       </td>
       <td style="text-align:left">
         <p></p>
-        <p>Path to the log file</p>
+        <p>Path to the log file.</p>
       </td>
     </tr>
     <tr>
@@ -125,7 +123,7 @@ These parameters are adjusted in `FileLogSettings`:
       </td>
       <td style="text-align:left">
         <p></p>
-        <p>Used to render log messages</p>
+        <p>Used to render log messages.</p>
       </td>
     </tr>
     <tr>
@@ -135,7 +133,7 @@ These parameters are adjusted in `FileLogSettings`:
         </p>
       </td>
       <td style="text-align:left">If specified, this IFormatProvider will be used when formatting log property
-        values</td>
+        values.</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -143,7 +141,7 @@ These parameters are adjusted in `FileLogSettings`:
         <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>FileOpenMode</b></a>
         </p>
       </td>
-      <td style="text-align:left">Specifies the way to treat an existing log file: append (default) or rewrite</td>
+      <td style="text-align:left">Specifies the way to treat an existing log file: append (default) or rewrite.</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -151,7 +149,7 @@ These parameters are adjusted in `FileLogSettings`:
         <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>RollingStrategy</b></a>
         </p>
       </td>
-      <td style="text-align:left">An optional rolling strategy (disabled by default)</td>
+      <td style="text-align:left">An optional rolling strategy (disabled by default).</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -159,7 +157,7 @@ These parameters are adjusted in `FileLogSettings`:
         <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>Encoding</b></a>
         </p>
       </td>
-      <td style="text-align:left">Output text encoding (UTF-8 by default)</td>
+      <td style="text-align:left">Output text encoding (UTF-8 by default).</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -167,7 +165,7 @@ These parameters are adjusted in `FileLogSettings`:
         <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>OutputBufferSize</b></a>
         </p>
       </td>
-      <td style="text-align:left">Output buffer size, in bytes (64K by default)</td>
+      <td style="text-align:left">Output buffer size, in bytes (64K by default).</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -175,7 +173,7 @@ These parameters are adjusted in `FileLogSettings`:
         <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>EnabledLogLevels</b></a>
         </p>
       </td>
-      <td style="text-align:left">A whitelist of enabled LogLevels</td>
+      <td style="text-align:left">A whitelist of enabled LogLevels.</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -183,7 +181,7 @@ These parameters are adjusted in `FileLogSettings`:
         <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>EventsQueueCapacity</b></a>
         </p>
       </td>
-      <td style="text-align:left">Capacity of the internal log events queue</td>
+      <td style="text-align:left">Capacity of the internal log events queue.</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -192,7 +190,7 @@ These parameters are adjusted in `FileLogSettings`:
         </p>
       </td>
       <td style="text-align:left">Specifies how many log events are processed in one iteration for each
-        file</td>
+        file.</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -201,7 +199,7 @@ These parameters are adjusted in `FileLogSettings`:
         </p>
       </td>
       <td style="text-align:left">Cooldown for enforcing file-related settings (name, rolling strategy,
-        buffer size, etc.)</td>
+        buffer size, etc.).</td>
     </tr>
   </tbody>
 </table>

@@ -4,10 +4,7 @@ description: A bridge from Vostok to Serilog/Log4Net .
 
 # Integration with SeriLog/Log4Net
 
-Do you use Serilog/Log4Net? Want to try Vostok or to move on it?  
-It's not easy to move all at once. That's why we created this library.
-
-You can create Vostok's log interface and use it like Vostok. Everything inside will stay the same.
+If you already use Serilog or Log4net in your project but want to try out Vostok, use special libraries. You can create an adapter and use it as a Vostok. Everything inside will remain the same.
 
 ### [Vostok.Logging.Serilog](vostok.logging.serilog.md)
 

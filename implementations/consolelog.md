@@ -18,7 +18,7 @@ using Vostok.Logging.Console;
 var log = new ConsoleLog();
 ```
 
-Now you can create different events. Let it be error message:
+Create an event. Let it be an error message:
 
 ```csharp
 log.Error("Error number 1");
@@ -45,8 +45,8 @@ Result:
 
 ### First Usage
 
-Let's try to configure a log and use `ConsoleLogSettings` for it.   
-For example, you can change output template. The log would show only time stamp and message. We'll leave the rest of the code the same:
+Configure a log and use `ConsoleLogSettings` for it.   
+For example, you can change output template. The log would show only time stamp and message. Leave the rest of the code the same:
 
 ```csharp
 var consoleLog = new ConsoleLog(new ConsoleLogSettings
@@ -94,7 +94,7 @@ This parameters are adjusted in `ConsoleLogSettings`:
       </td>
       <td style="text-align:left">
         <p></p>
-        <p>used to render log messages</p>
+        <p>Used to render log messages. For more information, see <a href="../syntax.md#output-template">Syntax</a>.</p>
       </td>
     </tr>
     <tr>

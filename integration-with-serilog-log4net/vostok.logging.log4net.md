@@ -4,7 +4,7 @@ description: Represents an adapter between Vostok logging interfaces and log4net
 
 # Vostok.Logging.Log4net
 
-If you have already using Log4net, but want to try Vostok.Logging, we have specific library Vostok.Logging.Log4net. It won't be necessary for you to rewrite all logging with it. Create an adapter, and you get Vostok's facade of the available log.
+If you're already using Log4net, but want to try Vostok.Logging, we have a special library Vostok.Logging.Log4net. You do not have to rewrite all logging. Create an adapter and you will get an Vostok facade from the available log.
 
 ### First usage
 
@@ -21,30 +21,30 @@ static void Main(string[] args)
 }
 ```
 
-Create an adapter. We'll keep working with it:
+Create an adapter:
 
 ```csharp
  var adapter = new Log4netLog(log);
 ```
 
-Let's try to work with it as with Vostok's ILog. Type any informational output message:
+Work with it as with Vostok's ILog. Type any informational message:
 
 ```csharp
 adapter.Info("test");
 ```
 
-We shall notice, that we treated it like Vostok's log, but we see Log4net's format on the console:
+Result:
 
 ```aspnet
 2018-11-09 11:59:06,776 INFO Log.Program - test
 ```
 
 Why that is?  
-We had Log4net's log. And then we created an adapter for treating it like Vostok's log. But all inside remained the same. Therefore, we see Log4net's format on the console.
+There were Log4net logs. Then you created an adapter to handle as the Vostok log. But everything inside remained the same. So on the console you see the Log4net format.
 
 ### Example 1
 
-Try to do something slightly more complicated. Let's complement the example above.  
+Complement the example above.  
 First of all, create a simple Vostok's file log:
 
 ```csharp
@@ -54,11 +54,11 @@ var fileLog = new FileLog(new FileLogSettings
 });
 ```
 
-We would create a log which synchronous logging on the console and in a file.  
-We have Log4net's log which output events on console and we have Vostok's log which output events in the file.  
-We need a single entry point for synchronous logging.  
-Create a composite log for it. Pass fileLog и adapter in the composite.  
-We passe the adapter because composite accept only Vostok's implementations.
+Create a log that records information synchronously to the console and to a file.  
+You have Log4net's log which output events on console and Vostok's log which output events in the file.  
+A single entry point is required for synchronous entry.  
+Create a composite log for it. Pass fileLog and adapter in the composite.  
+The adapter is necessary because composite only accepts Vostok implementations.
 
 ```csharp
 var composite = new CompositeLog(fileLog, adapter);
@@ -81,7 +81,6 @@ File:
 
 ### Example 2
 
-Let's a few more complicate the code above and see what's going.  
 Create an event with added properties. Pass it in `composite`:
 
 ```csharp
@@ -116,5 +115,5 @@ File:
 ```
 
 Log4net log's settings remained. Log didn't process properties.   
-We changed `FileLogSettings` and saw all the information about events and even properties in the file.
+You changed `FileLogSettings` and saw all event information and even properties in the file.
 
