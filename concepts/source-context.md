@@ -1,6 +1,6 @@
 # Source context
 
-Source context is meant to denote the sources of logging events, such as classes calling the log methods. This context encodes the hierarchy of log's ownership. It is produced with `ForContext` method and bound to returned log instance. The dominant use case for source context is to obtain class-based logs:
+Source context is meant to denote the sources of logging events, such as classes calling the log methods. This context also encodes the hierarchy of log's ownership. It is produced with `ForContext` method and bound to returned log instance. The dominant use case for source context is to obtain class-based logs:
 
 ```csharp
 class MyClass
