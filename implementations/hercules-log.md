@@ -1,0 +1,4 @@
+# Hercules log
+
+TODO
+

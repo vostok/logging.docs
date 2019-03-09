@@ -1,0 +1,4 @@
+# Vostok: configuration library
+
+TODO
+

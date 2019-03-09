@@ -2,17 +2,59 @@
 
 * [Home](README.md)
 * [Guarantees](guarantees.md)
-* [Basics](basics.md)
-* [Syntax](syntax.md)
-* [Quick Start](quick-start.md)
-* [Implementations](implementations/README.md)
-  * [ConsoleLog](implementations/consolelog.md)
-  * [FileLog](implementations/filelog.md)
-* [Advanced usage](advanced-usage/README.md)
-  * [Use сases](advanced-usage/use-sases.md)
-  * [SMTH](advanced-usage/custom-implementations.md)
-* [Integration with SeriLog/Log4Net](integration-with-serilog-log4net/README.md)
-  * [Vostok.Logging.Serilog](integration-with-serilog-log4net/vostok.logging.serilog.md)
-  * [Vostok.Logging.Log4net](integration-with-serilog-log4net/vostok.logging.log4net.md)
-* [Interaction with other Vostok libraries](interaction-with-other-vostok-libraries.md)
+* [Quickstart](quick-start.md)
+* [Configuration](configuration.md)
+* [Modules](modules/README.md)
+  * [Abstractions](modules/abstractions.md)
+  * [Formatting](modules/formatting.md)
+  * [Console](modules/console.md)
+  * [File](modules/file.md)
+  * [Hercules](modules/hercules.md)
+  * [Context](modules/context.md)
+  * [Serilog](modules/serilog.md)
+  * [Log4net](modules/log4net.md)
+  * [Microsoft](modules/microsoft.md)
+
+## Concepts
+
+* [Log events](concepts/log-events.md)
+* [Log interface](concepts/log-interface.md)
+* [Syntax](concepts/syntax/README.md)
+  * [Logging extensions](concepts/syntax/logging-extensions.md)
+  * [Message templates](concepts/syntax/message-templates.md)
+  * [Passing properties](concepts/syntax/passing-properties.md)
+* [Formatting](concepts/formatting/README.md)
+  * [Output templates](concepts/formatting/output-templates.md)
+  * [Special tokens](concepts/formatting/special-tokens.md)
+  * [Format specifiers](concepts/formatting/format-specifiers.md)
+* [Source context](concepts/source-context.md)
+* [Operation context](concepts/operation-context.md)
+
+## Implementations
+
+* [Silent log](implementations/silent-log.md)
+* [Console log](implementations/console-log.md)
+* [File log](implementations/file-log.md)
+* [Hercules log](implementations/hercules-log.md)
+
+## Integrations
+
+* [Serilog](integrations/serilog.md)
+* [Log4net](integrations/log4net.md)
+* [Microsoft logging](integrations/microsoft-logging.md)
+* [Vostok: flowing context](integrations/vostok-flowing-context.md)
+* [Vostok: configuration library](integrations/vostok-configuration-library.md)
+
+## Scenarios
+
+* [Using source context](scenarios/using-source-context.md)
+* [Using operation context](scenarios/using-operation-context.md)
+* [Combining multiple logs](scenarios/combining-multiple-logs.md)
+* [Filtering events by level](scenarios/filtering-events-by-level.md)
+* [Filtering events by properties](scenarios/filtering-events-by-properties.md)
+* [Filtering events by arbitrary criterion](scenarios/filtering-events-by-arbitrary-criterion.md)
+* [Enriching events with custom properties](scenarios/enriching-events-with-custom-properties.md)
+* [Enriching events with flowing context properties](scenarios/enriching-events-with-flowing-context-properties.md)
+* [Using custom output templates](scenarios/using-custom-output-templates.md)
+* [Using static log provider](scenarios/using-static-log-provider.md)
 
