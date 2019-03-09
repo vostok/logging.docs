@@ -14,7 +14,7 @@ Log methods always return instantly \(and are mostly lock-free\). All the necess
 
 Async I/O implies buffering. Log implementations have configurable limits on internal buffer sizes to avoid allocating too much memory. CPU usage is generally bounded to a single core.
 
-#### No guaranteed delivery
+#### No guarantee of delivery
 
 Logs delivery is maintained on a best effort basis. Logs in Vostok are treated as a diagnostic tool as opposed to a business process building block.
 
