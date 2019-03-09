@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Home](README.md)
-* [Guarantees](guarantees.md)
 * [Quickstart](quick-start.md)
+* [Guarantees](guarantees.md)
 * [Configuration](configuration.md)
 * [Modules](modules/README.md)
   * [Abstractions](modules/abstractions.md)
