@@ -120,8 +120,7 @@ This parameters are adjusted in `ConsoleLogSettings`:
     <tr>
       <td style="text-align:left">
         <p></p>
-        <p><a href="https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs"><b>ColorsEnabled</b></a><b></b>
-        </p>
+        <p><a href="https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLogSettings.cs"><b>ColorsEnabled</b></a>&lt;b&gt;&lt;/b&gt;</p>
       </td>
       <td style="text-align:left">
         <p></p>
