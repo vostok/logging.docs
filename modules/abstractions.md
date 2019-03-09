@@ -30,13 +30,13 @@ cm ref add vostok.logging.abstractions <path-to-project>
 
 {% page-ref page="../concepts/source-context.md" %}
 
-{% page-ref page="../scenarios/combining-multiple-logs.md" %}
+{% page-ref page="../use-cases/combining-multiple-logs.md" %}
 
-{% page-ref page="../scenarios/filtering-events-by-level.md" %}
+{% page-ref page="../use-cases/filtering-events-by-level.md" %}
 
-{% page-ref page="../scenarios/filtering-events-by-properties.md" %}
+{% page-ref page="../use-cases/filtering-events-by-properties.md" %}
 
-{% page-ref page="../scenarios/enriching-events-with-custom-properties.md" %}
+{% page-ref page="../use-cases/enriching-events-with-custom-properties.md" %}
 
-{% page-ref page="../scenarios/using-static-log-provider.md" %}
+{% page-ref page="../use-cases/using-static-log-provider.md" %}
 

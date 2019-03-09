@@ -13,11 +13,11 @@ Every log event consists of five components:
 * **Level**
 
   * Levels indicate event severity:
-    * **Debug** — verbose output, typically disabled in production
-    * **Info** — neutral messages
-    * **Warn** — non-critical errors that don't affect the normal operation of the application
-    * **Error** — unexpected errors that may require human attention
-    * **Fatal** — critical errors resulting in application shutdown
+    * **Debug**: verbose output, typically disabled in production
+    * **Info:** neutral messages
+    * **Warn:** non-critical errors that don't affect the normal operation of the application
+    * **Error:** unexpected errors that may require human attention
+    * **Fatal:** critical errors resulting in application shutdown
 
 * **Timestamp**
 

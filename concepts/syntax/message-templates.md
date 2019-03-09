@@ -12,5 +12,5 @@ Any mismatched brackets are kept as-is: `key}` template renders to the same text
 
 Any placeholders without corresponding properties are replaced with empty strings.
 
-Double curly brackets can be used to escape occurrences of curly brackets in uninterpreted text: `{{key}}` template renders to `{key}` text.
+Double curly brackets can be used to escape occurrences of curly brackets in text: `{{key}}` template renders to `{key}` text.
 

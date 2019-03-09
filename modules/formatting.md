@@ -24,5 +24,5 @@ cm ref add vostok.logging.formatting <path-to-project>
 
 {% page-ref page="../concepts/formatting/" %}
 
-{% page-ref page="../scenarios/using-custom-output-templates.md" %}
+{% page-ref page="../use-cases/using-custom-output-templates.md" %}
 

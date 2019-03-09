@@ -4,7 +4,7 @@ This page lists the guarantees provided by built-in log implementations \([conso
 
 #### No exceptions from logging methods
 
-If log events cannot be saved for any reason \(ranging from incorrect [message template](concepts/syntax/message-templates.md) to running out of disk space or experiencing remote backend unavailability\), log methods still complete successfully without throwing exceptions. If possible, a diagnostic message is produced via secondary means \(console output for [file log](implementations/file-log.md) and any local log for [Hercules log](implementations/hercules-log.md)\).
+If log events cannot be saved for any reason \(ranging from incorrect [message template](concepts/syntax/message-templates.md) to running out of disk space or experiencing remote backend unavailability\), log method calls still complete successfully without throwing exceptions. If possible, a diagnostic message is produced via secondary means \(console output for [file log](implementations/file-log.md) and any local log for [Hercules log](implementations/hercules-log.md)\).
 
 #### Asynchronous I/O
 

@@ -2,7 +2,7 @@
 
 ### Description
 
-This library provides an intergation with [Vostok.Context](https://vostok.gitbook.io/context/), enabling the use of [operation context](../concepts/operation-context.md) and [enrichment](../scenarios/enriching-events-with-flowing-context-properties.md) of log events from flowing context properties.
+This library provides an intergation with [Vostok.Context](https://vostok.gitbook.io/context/), enabling the use of [operation context](../concepts/operation-context.md) and [enrichment](../use-cases/enriching-events-with-flowing-context-properties.md) of log events from flowing context properties.
 
 ### Source and packages
 
@@ -24,7 +24,7 @@ cm ref add vostok.logging.context <path-to-project>
 
 {% page-ref page="../concepts/operation-context.md" %}
 
-{% page-ref page="../scenarios/using-operation-context.md" %}
+{% page-ref page="../use-cases/using-operation-context.md" %}
 
-{% page-ref page="../scenarios/enriching-events-with-flowing-context-properties.md" %}
+{% page-ref page="../use-cases/enriching-events-with-flowing-context-properties.md" %}
 

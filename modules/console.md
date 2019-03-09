@@ -2,7 +2,7 @@
 
 ### Description
 
-This library contains an [implementation](../implementations/console-log.md) of ILog that writes events to console output stream. Implementation comes in two flavors: [ConsoleLog](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLog.cs) \(default, async\) and [SynchronousConsoleLog ](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/SynchronousConsoleLog.cs)\(well-suited for tests and debugging\).
+This library contains an [implementation](../implementations/console-log.md) of ILog that writes events to console output. Implementation comes in two flavors: [ConsoleLog](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/ConsoleLog.cs) \(default, async\) and [SynchronousConsoleLog ](https://github.com/vostok/logging.console/blob/master/Vostok.Logging.Console/SynchronousConsoleLog.cs)\(well-suited for tests and debugging\).
 
 ### Source and packages
 
