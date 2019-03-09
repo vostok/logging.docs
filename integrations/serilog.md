@@ -1,4 +1,4 @@
-# Serilog
+# Serilog integration
 
 TODO
 

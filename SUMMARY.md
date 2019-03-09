@@ -39,11 +39,9 @@
 
 ## Integrations
 
-* [Serilog](integrations/serilog.md)
-* [Log4net](integrations/log4net.md)
-* [Microsoft logging](integrations/microsoft-logging.md)
-* [Vostok: flowing context](integrations/vostok-flowing-context.md)
-* [Vostok: configuration library](integrations/vostok-configuration-library.md)
+* [Serilog integration](integrations/serilog.md)
+* [Log4net integration](integrations/log4net.md)
+* [Microsoft logging integration](integrations/microsoft-logging.md)
 
 ## Scenarios
 

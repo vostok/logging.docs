@@ -2,9 +2,9 @@
 
 ### Description
 
-This library contains all the core interfaces and models, such as [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs) and [LogEvent](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/LogEvent.cs). It also hosts a wide set of [extensions](https://github.com/vostok/logging.abstractions/tree/master/Vostok.Logging.Abstractions/Extensions) implemented through ILog decorators.
+This library contains core interfaces and models, such as [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs) and [LogEvent](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/LogEvent.cs). It also hosts a wide set of [extensions](https://github.com/vostok/logging.abstractions/tree/master/Vostok.Logging.Abstractions/Extensions) implemented through ILog decorators.
 
-### NuGet package
+### Source and packages
 
 **GitHub repository:** [vostok/logging.abstractions](https://github.com/vostok/logging.abstractions)
 
@@ -14,13 +14,13 @@ This library contains all the core interfaces and models, such as [ILog](https:/
 Install-Package Vostok.Logging.Abstractions
 ```
 
-[Cement](https://github.com/skbkontur/cement) users should reference the module with following command:
+[Cement](https://github.com/skbkontur/cement) users should reference this module with the following command:
 
 ```text
 cm ref add vostok.logging.abstractions <path-to-project>
 ```
 
-### Related concepts and scenarios
+### Related pages
 
 {% page-ref page="../concepts/log-events.md" %}
 
