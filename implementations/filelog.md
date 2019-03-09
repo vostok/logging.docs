@@ -105,9 +105,8 @@ These parameters are adjusted in `FileLogSettings`:
   <tbody>
     <tr>
       <td style="text-align:left">
-        <p><b></b>
-        </p>
-        <p><b></b><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>FilePath</b></a>
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <p>&lt;b&gt;&lt;/b&gt;<a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>FilePath</b></a>
         </p>
       </td>
       <td style="text-align:left">
@@ -195,8 +194,7 @@ These parameters are adjusted in `FileLogSettings`:
     <tr>
       <td style="text-align:left">
         <p></p>
-        <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>FileSettingsUpdateCooldown</b></a><b></b>
-        </p>
+        <p><a href="https://github.com/vostok/logging.file/blob/master/Vostok.Logging.File/Configuration/FileLogSettings.cs"><b>FileSettingsUpdateCooldown</b></a>&lt;b&gt;&lt;/b&gt;</p>
       </td>
       <td style="text-align:left">Cooldown for enforcing file-related settings (name, rolling strategy,
         buffer size, etc.).</td>
