@@ -22,7 +22,7 @@
 * [Syntax](concepts/syntax/README.md)
   * [Logging extensions](concepts/syntax/logging-extensions.md)
   * [Message templates](concepts/syntax/message-templates.md)
-  * [Passing properties](concepts/syntax/passing-properties.md)
+  * [Providing property values](concepts/syntax/passing-properties.md)
 * [Formatting](concepts/formatting/README.md)
   * [Output templates](concepts/formatting/output-templates.md)
   * [Special tokens](concepts/formatting/special-tokens.md)
