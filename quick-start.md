@@ -11,5 +11,5 @@ var consoleLog = new SynchronousConsoleLog();
 log.Info("Hello, {Name}!", "%username");
 ```
 
-Well done! Next step is to learn about logging [syntax](concepts/syntax/), explore all [modules](modules/) and log implementations \([console](implementations/console-log.md), [file](implementations/file-log.md), [Hercules](implementations/hercules-log.md)\) and get used to the notion of [source context](concepts/source-context.md).
+Well done! Next step is to learn about logging [syntax](concepts/syntax/), explore available [modules](modules/) and log implementations \([console](implementations/console-log.md), [file](implementations/file-log.md), [Hercules](implementations/hercules-log.md)\) and get used to the notion of [source context](concepts/source-context.md).
 

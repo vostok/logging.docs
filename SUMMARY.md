@@ -43,7 +43,7 @@
 * [Log4net integration](integrations/log4net.md)
 * [Microsoft logging integration](integrations/microsoft-logging.md)
 
-## Scenarios
+## Use cases
 
 * [Using source context](scenarios/using-source-context.md)
 * [Using operation context](scenarios/using-operation-context.md)
