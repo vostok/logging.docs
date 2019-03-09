@@ -17,8 +17,8 @@
 
 ## Concepts
 
-* [Log events](concepts/log-events.md)
 * [Log interface](concepts/log-interface.md)
+* [Log events](concepts/log-events.md)
 * [Syntax](concepts/syntax/README.md)
   * [Logging extensions](concepts/syntax/logging-extensions.md)
   * [Message templates](concepts/syntax/message-templates.md)
