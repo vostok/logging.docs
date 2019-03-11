@@ -13,7 +13,7 @@
     * [Providing property values](concepts/syntax/passing-properties.md)
   * [Formatting](concepts/formatting/README.md)
     * [Output templates](concepts/formatting/output-templates.md)
-    * [Special tokens](concepts/formatting/special-tokens.md)
+    * [Special properties](concepts/formatting/special-tokens.md)
     * [Format specifiers](concepts/formatting/format-specifiers.md)
   * [Source context](concepts/source-context.md)
   * [Operation context](concepts/operation-context.md)
