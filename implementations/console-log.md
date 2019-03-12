@@ -4,7 +4,7 @@
 
 ```csharp
 var consoleLog = new ConsoleLog();
-var configuredConsoleLog = new ConsoleLog(new ConsoleLogSettings { });
+var configuredConsoleLog = new ConsoleLog(new ConsoleLogSettings());
 ```
 
 
@@ -66,7 +66,9 @@ Here's what `ConsoleLogSettings` have to offer:
       <td style="text-align:left">Provides a mapping from log levels to console colors.</td>
     </tr>
   </tbody>
-</table>
+</table>All configuration parameters are optional.
+
+
 
 ### Global configuration
 

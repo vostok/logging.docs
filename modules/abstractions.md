@@ -2,7 +2,7 @@
 
 ### Description
 
-This library contains core interfaces and models, such as [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs) and [LogEvent](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/LogEvent.cs). It also hosts a wide set of [extensions](https://github.com/vostok/logging.abstractions/tree/master/Vostok.Logging.Abstractions/Extensions) implemented through ILog decorators.
+This library contains core interfaces and models, such as [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs) and [LogEvent](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/LogEvent.cs). It also hosts a wide set of [extensions](https://github.com/vostok/logging.abstractions/tree/master/Vostok.Logging.Abstractions/Extensions) implemented through `ILog` decorators.
 
 ### Source and packages
 
@@ -30,13 +30,11 @@ cm ref add vostok.logging.abstractions <path-to-project>
 
 {% page-ref page="../concepts/source-context.md" %}
 
-{% page-ref page="../use-cases/combining-multiple-logs.md" %}
+{% page-ref page="../how-to-guides/combining-multiple-logs.md" %}
 
-{% page-ref page="../use-cases/filtering-events-by-level.md" %}
+{% page-ref page="../how-to-guides/filtering-events-by-level.md" %}
 
-{% page-ref page="../use-cases/filtering-events-by-properties.md" %}
+{% page-ref page="../how-to-guides/enriching-events-with-custom-properties.md" %}
 
-{% page-ref page="../use-cases/enriching-events-with-custom-properties.md" %}
-
-{% page-ref page="../use-cases/using-static-log-provider.md" %}
+{% page-ref page="../how-to-guides/using-static-log-provider.md" %}
 

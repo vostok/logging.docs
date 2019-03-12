@@ -144,7 +144,9 @@ var dynamicallyConfiguredLog = new FileLog(() => ObtainSettings());
         in settings, the switching may be delayed for up to value of this option.</td>
     </tr>
   </tbody>
-</table>Most of these parameters support dynamic reconfiguration when a constructor with `Func<FileLogSettings>` is used and provided delegate returns different instances of `FileLogSettings`. `FileLog` will react to these changes by either reopening the file, switching to a new file or simply using the new values where applicable.
+</table>All of these parameters are optional.
+
+Most of listed options support dynamic reconfiguration when a constructor with `Func<FileLogSettings>` is used and provided delegate returns different instances of `FileLogSettings`. `FileLog` will react to these changes by either reopening the file, switching to a new file or simply using the new values where applicable.
 
 The only notable exception to this rule is the `EventsQueueCapacity` option: it has a per-file scope and can't be changed dynamically.
 

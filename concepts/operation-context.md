@@ -82,5 +82,5 @@ Sample output from this code:
 
 ### Related pages
 
-{% page-ref page="../use-cases/using-operation-context.md" %}
+{% page-ref page="../how-to-guides/using-operation-context.md" %}
 

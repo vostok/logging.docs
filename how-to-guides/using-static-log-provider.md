@@ -1,0 +1,4 @@
+# Static log provider
+
+TODO
+

@@ -2,7 +2,7 @@
 
 ### Description
 
-This library contains an [implementation](../implementations/file-log.md) of ILog that sends events to [Hercules](https://github.com/vostok/hercules) using provided [IHerculesSink](https://github.com/vostok/hercules.client.abstractions/blob/master/Vostok.Hercules.Client.Abstractions/IHerculesSink.cs) implementation. It also provides mapping from Hercules events back to log events model.
+This library contains an [implementation](../implementations/hercules-log.md) of `ILog` that sends events to [Hercules](https://github.com/vostok/hercules) using provided [IHerculesSink](https://github.com/vostok/hercules.client.abstractions/blob/master/Vostok.Hercules.Client.Abstractions/IHerculesSink.cs) implementation. It also provides mapping from Hercules events back to log events model.
 
 ### Source and packages
 

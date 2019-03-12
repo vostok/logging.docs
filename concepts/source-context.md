@@ -73,5 +73,5 @@ Sample output from this code:
 
 ### Related pages
 
-{% page-ref page="../use-cases/using-source-context.md" %}
+{% page-ref page="../how-to-guides/using-source-context.md" %}
 

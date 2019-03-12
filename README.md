@@ -45,11 +45,11 @@ Vostok.Logging is a [set](modules/) of libraries providing structured logging fo
 
 * **Filtering of log events.**
 
-  * There's built-in support for filtering by [level](use-cases/filtering-events-by-level.md), [properties](use-cases/filtering-events-by-properties.md) or [arbitrary contents](use-cases/filtering-events-by-arbitrary-criterion.md) of [log events](concepts/log-events.md).
+  * There's built-in support for [filtering](how-to-guides/filtering-events-by-level.md) by level, properties or arbitrary contents of [log events](concepts/log-events.md).
 
 * **Enrichment of log events with custom properties.**
 
-  * Log events can be dynamically enriched with new properties either [specified by user](use-cases/enriching-events-with-custom-properties.md) or [provided from ambient context](use-cases/enriching-events-with-flowing-context-properties.md).
+  * Log events can be dynamically [enriched](how-to-guides/enriching-events-with-custom-properties.md) with new properties either specified by user or provided from ambient context.
 
 * **Support for contextual information tied to log events.**
 
