@@ -20,6 +20,6 @@ Here's the list of all special properties supported by [output templates](output
 
 * `Uptime` — emits the number of milliseconds elapsed since application start. Supports [format specifiers](format-specifiers.md).
 
-* `Properties` — emits all properties not mentioned elsewhere in output template as a JSON object.
+* `Properties` — emits all properties not mentioned elsewhere in the output template as a JSON object.
   * Example output: `{`"prop1": "value1", "prop2" : "value2"`}`
 

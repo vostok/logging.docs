@@ -4,7 +4,7 @@ _Enriching_ is a term used to denote adding external properties to [log events](
 
 Default implementations of [source context](../concepts/source-context.md) and [operation context](../concepts/operation-context.md) involve enrichment of log events with special well-known properties.
 
-Enrichment extensions do not overwrite properties already present in log events by default, although this can be configured.
+By default, enrichment extensions do not overwrite properties already present in log events, although this behaviour can be configured.
 
 
 
@@ -12,13 +12,13 @@ Enrichment extensions do not overwrite properties already present in log events 
 
 **Prerequisites**: install [abstractions module](../modules/abstractions.md).
 
-Add a property with given name and value to all log events without overwriting existing values:
+Add a property with given name and value to incoming log events without overwriting existing values:
 
 ```csharp
 log = log.WithProperty("env", "dev");
 ```
 
-Add given properties to all log events, potentially overwriting existing values:
+Add given properties to incoming log events, potentially overwriting existing values:
 
 ```csharp
 log = log.WithProperties(
@@ -30,7 +30,7 @@ log = log.WithProperties(
     allowOverwrite: true);
 ```
 
-Add all public properties of given object to all log events:
+Add all public properties of given object to incoming log events:
 
 ```csharp
 log = log.WithObjectProperties(new {Prop1 = 1, Prop2 = 2});
@@ -42,13 +42,13 @@ log = log.WithObjectProperties(new {Prop1 = 1, Prop2 = 2});
 
 **Prerequisites**: install [abstractions module](../modules/abstractions.md).
 
-Add a property with given key and value provided by given delegate to all log events:
+Add a property with given key and value provided by given delegate to incoming log events:
 
 ```csharp
-log = log.WithProperty("dynamicProp", () => GetPropValue());
+log = log.WithProperty("dynamicProperty", () => GetPropertyValue());
 ```
 
-Add all public properties of the object provided by given delegate to all log events:
+Add all public properties of the object provided by given delegate to incoming log events:
 
 ```csharp
 log = log.WithObjectProperties<CustomType>(() => GetCustomValue());
@@ -60,23 +60,23 @@ log = log.WithObjectProperties<CustomType>(() => GetCustomValue());
 
 **Prerequisites**: install [abstractions module](../modules/abstractions.md) and [context module](../modules/context.md).
 
-Extensions listed in this section allow to enrich log events with values from `FlowingContext` exposed from [Vostok.Context](https://vostok.gitbook.io/context) library.
+Extensions listed in this section allow to enrich log events with values from `FlowingContext` exposed from [Vostok.Context](https://vostok.gitbook.io/context) library:
 
-Add the value of the property with given name from `FlowingContext` to incoming log events with specified log name \(which may differ from property name in context\):
+* Add the value of the property with given name from `FlowingContext` to incoming log events with specified log name \(which may differ from property name in context\):
 
 ```csharp
 log = log.WithFlowingContextProperty("contextProperty", "logProperty");
 ```
 
-Add the value of the global with following type from `FlowingContext` to incoming log events with specified name:
+* Add the value of the global with following type from `FlowingContext` to incoming log events with specified name:
 
 ```csharp
 log = log.WithFlowingContextGlobal<CustomType>("logProperty");
 ```
 
-Add all current properties from `FlowingContext` to incoming log events:
+* Add all current properties from `FlowingContext` to incoming log events:
 
-```text
+```csharp
 log = log.WithAllFlowingContextProperties();
 ```
 

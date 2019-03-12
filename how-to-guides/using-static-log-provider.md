@@ -10,7 +10,7 @@ It's intended use case is logging in libraries: library authors may not want to 
 LogProvider.Get().Info("library code message");
 ```
 
-User application or host may choose to explicitly configure `LogProvider` in order to enable this logging:
+User application or underlying host may choose to explicitly configure `LogProvider` in order to enable this logging:
 
 ```csharp
 LogProvider.Configure(new ConsoleLog());

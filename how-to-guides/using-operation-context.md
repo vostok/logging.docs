@@ -15,10 +15,10 @@ log = log.WithOperationContext();
 ```csharp
 using (new OperationContextToken("op1")) 
 {
-    ...
+    // log something
     using (new OperationContextToken("op2")
     {
-        ...
+        // log something
     }
 }
 ```

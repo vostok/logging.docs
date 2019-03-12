@@ -2,7 +2,7 @@
 
 ### Description
 
-This library contains an [implementation](../implementations/file-log.md) of ILog that writes events to local files.
+This library contains an [implementation](../implementations/file-log.md) of `ILog` that writes events to local files.
 
 ### Source and packages
 
