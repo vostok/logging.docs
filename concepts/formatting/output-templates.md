@@ -22,20 +22,11 @@ See the sections about [source context](../source-context.md) and [operation con
 
 See [format specifiers](format-specifiers.md) section to find out how the `:w` modifier works. 
 
-### Constructing custom templates
+### Custom templates:
 
-There are two ways to obtain a custom template:
+See the guide dedicated to custom templates usage:
 
-* Parse it from an arbitrary string:
-  * ```csharp
-    var template = OutputTemplate.Parse("Here's the message: {Message}{NewLine}");
-    ```
-* Use `OutputTemplateBuilder` to construct it in code: 
-  * ```csharp
-    var template = new OutputTemplateBuilder()
-        .AddText("Here's the message: ")
-        .AddMessage()
-        .AddNewline()
-        .Build();
-    ```
+{% page-ref page="../../how-to-guides/using-custom-output-templates.md" %}
+
+### 
 
