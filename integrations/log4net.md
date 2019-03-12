@@ -18,7 +18,7 @@ Default behaviour of `LoggerNameFactory` is to merge context values using dot as
 ["foo", "bar", "baz"] context --> "foo.bar.baz" logger name
 ```
 
-It can be overriden to implement custom handling of source context. Here's how to configure it to use only the last context value from source context:
+Here's how to configure it to use only the last value from source context:
 
 ```csharp
 log.LoggerNameFactory = context => context.Last();
