@@ -71,7 +71,3 @@ Sample output from this code:
 2019-03-10 01:21:25,555 INFO  [foo => bar => baz] Message 3
 ```
 
-### Related pages
-
-{% page-ref page="../how-to-guides/using-source-context.md" %}
-

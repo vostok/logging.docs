@@ -37,11 +37,10 @@
   * [Log4net integration](integrations/log4net.md)
   * [Microsoft logging integration](integrations/microsoft-logging.md)
 * [How-to guides](how-to-guides/README.md)
-  * [Using source context](how-to-guides/using-source-context.md)
   * [Using operation context](how-to-guides/using-operation-context.md)
+  * [Using static log provider](how-to-guides/using-static-log-provider.md)
   * [Filtering events](how-to-guides/filtering-events-by-level.md)
   * [Enriching events](how-to-guides/enriching-events-with-custom-properties.md)
   * [Combining multiple logs](how-to-guides/combining-multiple-logs.md)
   * [Custom output templates](how-to-guides/using-custom-output-templates.md)
-  * [Static log provider](how-to-guides/using-static-log-provider.md)
 

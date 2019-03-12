@@ -1,6 +1,6 @@
 # Filtering events
 
-Prerequisites:
+**Prerequisites**:
 
 * Install [abstractions module](../modules/abstractions.md)
 * Read about general log [configuration practices](../configuration.md)
