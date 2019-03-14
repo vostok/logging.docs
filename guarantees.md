@@ -21,5 +21,7 @@ Logs delivery is maintained on a best effort basis. Events can be lost in follow
 * Internal buffers overflow due to unavailability of underlying storage or sheer volume of incoming logs.
 * Application terminates abruptly without flushing/disposing async loggers.
 
+Reporting of events loss \(metrics, diagnostic messages\) is implementation-specific \(see usage tips for [file](implementations/file-log.md#usage-tips), [console](implementations/console-log.md#usage-tips) and [Hercules](implementations/hercules-log.md#usage-tips) logs\).
+
  
 

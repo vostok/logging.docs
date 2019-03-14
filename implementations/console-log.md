@@ -95,6 +95,11 @@ Note that changes in these global configuration parameters only take effect if p
 
 * Internal queue with limited capacity implies that log messages may be lost in the event of overflow \(see [guarantees section](../guarantees.md) for more on this topic\). Use `EventsLost` property of a single `ConsoleLog` instance or static `TotalEventsLost` property to check if any events have been discarded.
 
+* If any log events are lost due to internal queue overflow, `ConsoleLog` emits a special diagnostic message that looks like this:
+  * ```text
+    [ConsoleLog] Buffer overflow. 100 log events were lost (events queue capacity = 50000).
+    ```
+
 
 
 ### Synchronous version
