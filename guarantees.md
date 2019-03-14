@@ -16,9 +16,7 @@ Async I/O implies buffering. Log implementations have configurable limits on int
 
 #### No guarantee of delivery
 
-Logs delivery is maintained on a best effort basis. Logs in Vostok are treated as a diagnostic tool as opposed to a business process building block.
-
-Events can be lost in following cases:
+Logs delivery is maintained on a best effort basis. Events can be lost in following cases:
 
 * Internal buffers overflow due to unavailability of underlying storage or sheer volume of incoming logs.
 * Application terminates abruptly without flushing/disposing async loggers.

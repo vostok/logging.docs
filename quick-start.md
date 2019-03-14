@@ -2,8 +2,14 @@
 
 Here's the simplest way to experience Vostok.Logging for the first time:
 
-1. Install [console](modules/console.md#source-and-packages) and [abstractions](modules/abstractions.md) modules.
-2. Create a log instance and write your first message:
+* Install [console](modules/console.md#source-and-packages) and [abstractions](modules/abstractions.md) modules:
+
+```text
+Install-Package Vostok.Logging.Console
+Install-Package Vostok.Logging.Abstractions
+```
+
+* Create a log instance and write your first message:
 
 ```csharp
 var consoleLog = new SynchronousConsoleLog();

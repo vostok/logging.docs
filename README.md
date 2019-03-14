@@ -2,13 +2,13 @@
 
 ## Vostok.Logging in a nutshell
 
-Vostok.Logging is a [set](modules/) of libraries providing structured logging for .NET applications, much like [Serilog](https://serilog.net/), but tightly integrated into Vostok ecosystem. Boasting a number of highly efficient implementations, it is aimed at supporting creation of reliable and fast applications.
+Vostok.Logging is a [set](modules/) of libraries providing structured logging for .NET applications, much like [Serilog](https://serilog.net/), but tightly integrated into Vostok ecosystem.
 
 ## Guiding design principles
 
-* **Logs are a diagnostic tool, not a business process building block**.
+* **Logging system should not be able to significantly impact application health or performance.**
 
-  * The most profound consequence of this principle is that the logging system should not be able to impact overall application health or performance in any significant way. [Guarantees](guarantees.md) section covers this topic in greater detail.
+  * [Guarantees](guarantees.md) section covers this topic in greater detail.
 
 * **Logging should be forgiving to user mistakes..**
 
