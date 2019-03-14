@@ -12,12 +12,31 @@ log.Info("Welcome, {User}. You have {UnreadCount} unread messages.", "Jenny", 2)
 
 Property names are inferred from placeholders in message template. 
 
-If arguments count exceeds template placeholders count, excess arguments are named with numbers denoting their positions.
+If arguments count exceeds template placeholders count, excess arguments are named with numbers denoting their positions:
+
+```csharp
+log.Info("Welcome, {User}.", "Jenny", "foo", "bar");
+// produced event properties: {"User": "Jenny", "1": "foo", "2": "bar"}
+```
 
 If provided arguments count is not sufficient to account for all template placeholders, the names for existing arguments are still inferred.
 
 {% hint style="info" %}
-This approach does not support multiple occurences of the same placeholder name within message template.
+Strictly speaking, this approach does not support multiple occurences of the same placeholder name within a message template \(last matched parameter value wins\):
+
+```csharp
+log.Info("Welcome, {name}. {name}, you have {count} unread messages.", 
+    "Jenny", 10);
+// The result is: "Welcome, 10. 10, you have  unread messages."
+```
+
+Although it's safe to use if all duplicate placeholder occurences in the template are located far enough not to get matched to any parameter values:
+
+```csharp
+log.Info("Welcome, {name}. You have {count} unread messages, {name}.",
+    "Jenny", 10);
+// The result is: Welcome, Jenny. You have 10 unread messages, Jenny.
+```
 {% endhint %}
 
 ### 
