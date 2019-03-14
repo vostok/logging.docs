@@ -22,7 +22,7 @@ log.Info("Welcome, {User}.", "Jenny", "foo", "bar");
 If provided arguments count is not sufficient to account for all template placeholders, the names for existing arguments are still inferred.
 
 {% hint style="info" %}
-Strictly speaking, this approach does not support multiple occurences of the same placeholder name within a message template \(last matched parameter value wins\):
+Strictly speaking, this approach does not support multiple occurences of the same placeholder name within a message template \(last matched argument wins\):
 
 ```csharp
 log.Info("Welcome, {name}. {name}, you have {count} unread messages.", 
@@ -30,7 +30,7 @@ log.Info("Welcome, {name}. {name}, you have {count} unread messages.",
 // The result is: "Welcome, 10. 10, you have  unread messages."
 ```
 
-Although it's safe to use if all duplicate placeholder occurences in the template are located far enough not to get matched to any parameter values:
+Although it's safe to use if all duplicate placeholder occurences in the template are located far enough not to get matched to any arguments:
 
 ```csharp
 log.Info("Welcome, {name}. You have {count} unread messages, {name}.",
