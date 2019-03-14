@@ -39,21 +39,21 @@ These extensions can be grouped in two ways:
 
     * Produces an event with given exception and [message template](message-templates.md).
     * ```csharp
-      log.Error(new Exception(), "I failed.");
+      log.Error(new Exception(), "I have failed.");
       ```
 
   * **Exception + string + T**:
 
     * Produces an event with given exception, [message template](message-templates.md) and properties of given object.
     * ```csharp
-      log.Error(new Exception(), "{Who} failed.", new { Who = "I" });
+      log.Error(new Exception(), "{Who} have/has failed.", new { Who = "I" });
       ```
 
   * **Exception + string + object\[\]**:
 
     * Produces an event with given exception, [message template](message-templates.md) and given property values \(names are inferred from message template\).
     * ```csharp
-      log.Error(new Exception(), "{Who} failed.", "I");
+      log.Error(new Exception(), "{Who} have/has failed.", "He");
       ```
 
 See the section about [providing property values](passing-properties.md) to extensions to get a grasp of how to provide values for placeholders in message template.
