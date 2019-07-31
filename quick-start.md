@@ -14,7 +14,7 @@ Install-Package Vostok.Logging.Abstractions
 ```csharp
 var consoleLog = new SynchronousConsoleLog();
 
-log.Info("Hello, {Name}!", "%username%");
+consoleLog.Info("Hello, {Name}!", "%username%");
 ```
 
 Well done! Next step is to learn about logging [syntax](concepts/syntax/), explore available [modules](modules/) and log [implementations](implementations/) and get used to the notion of [source context](concepts/source-context.md).
