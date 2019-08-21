@@ -10,5 +10,5 @@ var serilogAdapter = new SerilogLog(serilogLogger);
 
 It preserves message templates in their original form as Serilog's templating syntax is a superset of Vostok [message templates](../concepts/syntax/message-templates.md) capabilites. Properties are also passed as-is, bound by provided Serilog logger instance.
 
-`ForContext` method works exactly like it does in native [implementations](../implementations/): it causes returned log instances to enrich encoming log events with `SourceContext` property containing a hierarchical context value. See [source context](../concepts/source-context.md) section for more details.
+`ForContext` method works exactly like it does in native [implementations](../implementations/): it causes returned log instances to enrich incoming log events with `SourceContext` property containing a hierarchical context value. See [source context](../concepts/source-context.md) section for more details.
 
