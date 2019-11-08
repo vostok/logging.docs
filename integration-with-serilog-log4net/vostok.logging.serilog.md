@@ -18,9 +18,13 @@ var log = new LoggerConfiguration()
 
 Create an adapter:
 
+{% tabs %}
+{% tab title="" %}
 ```csharp
 ILog adapter = new SerilogLog(log);
 ```
+{% endtab %}
+{% endtabs %}
 
 Work with it as with Vostok's ILog. Type any informational message:
 

@@ -23,9 +23,13 @@ static void Main(string[] args)
 
 Create an adapter:
 
+{% tabs %}
+{% tab title="" %}
 ```csharp
  var adapter = new Log4netLog(log);
 ```
+{% endtab %}
+{% endtabs %}
 
 Work with it as with Vostok's ILog. Type any informational message:
 
