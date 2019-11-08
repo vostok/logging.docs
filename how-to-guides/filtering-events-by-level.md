@@ -57,6 +57,22 @@ log = log.WithEventsDroppedByProperties(props => props.ContainsKey("prop"));
 
 
 
+### Filter by a source context
+
+Select events having a source context with given value:
+
+```csharp
+log = log.WithEventsSelectedBySourceContext("foo");
+```
+
+Drop events having a source context with given value:
+
+```csharp
+log = log.WithEventsDroppedBySourceContext("foo");
+```
+
+
+
 ### Filter by arbitrary event content
 
 Select events satisfying given predicate:
