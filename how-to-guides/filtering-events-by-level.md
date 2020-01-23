@@ -57,18 +57,27 @@ log = log.WithEventsDroppedByProperties(props => props.ContainsKey("prop"));
 
 
 
-### Filter by a source context
+### Filter by source context
 
-Select events having a source context with given value:
+Select events having a source context with given value \(values are case-sensitive\):
 
 ```csharp
 log = log.WithEventsSelectedBySourceContext("foo");
+log = log.WithEventsSelectedBySourceContext<FooClass>();
 ```
 
-Drop events having a source context with given value:
+Drop events having a source context with given value \(values are case-sensitive\):
 
 ```csharp
 log = log.WithEventsDroppedBySourceContext("foo");
+log = log.WithEventsDroppedBySourceContext<FooClass>();
+```
+
+Drop events below some level having a source context with given value \(values are case-sensitive\):
+
+```csharp
+log = log.WithMinimumLevelForSourceContext("foo", LogLevel.Warn);
+log = log.WithMinimumLevelForSourceContext<FooClass>(LogLevel.Warn);
 ```
 
 
