@@ -63,20 +63,34 @@ Select events having a source context with given value \(values are case-sensiti
 
 ```csharp
 log = log.WithEventsSelectedBySourceContext("foo");
-log = log.WithEventsSelectedBySourceContext<FooClass>();
+
+log.ForContext("foo").Info("Hello!"); // will be logged
+log.ForContext("bar").Info("Hello!"); // will not be logged
 ```
 
 Drop events having a source context with given value \(values are case-sensitive\):
 
 ```csharp
 log = log.WithEventsDroppedBySourceContext("foo");
-log = log.WithEventsDroppedBySourceContext<FooClass>();
+
+log.ForContext("foo").Info("Hello!"); // will not be logged
+log.ForContext("bar").Info("Hello!"); // will be logged
 ```
 
 Drop events below some level having a source context with given value \(values are case-sensitive\):
 
 ```csharp
 log = log.WithMinimumLevelForSourceContext("foo", LogLevel.Warn);
+
+log.ForContext("foo").Info("Hello!"); // will not be logged
+log.ForContext("foo").Warn("Hello!"); // will be logged
+```
+
+There's also an alternative syntax that allows to infer context values from type names:
+
+```csharp
+log = log.WithEventsSelectedBySourceContext<FooClass>();
+log = log.WithEventsDroppedBySourceContext<FooClass>();
 log = log.WithMinimumLevelForSourceContext<FooClass>(LogLevel.Warn);
 ```
 
