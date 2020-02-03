@@ -19,6 +19,7 @@
   * [Operation context](concepts/operation-context.md)
 * [Modules](modules/README.md)
   * [Abstractions](modules/abstractions.md)
+  * [Configuration](modules/configuration.md)
   * [Formatting](modules/formatting.md)
   * [Console](modules/console.md)
   * [File](modules/file.md)
@@ -43,4 +44,5 @@
   * [Enriching events](how-to-guides/enriching-events-with-custom-properties.md)
   * [Combining multiple logs](how-to-guides/combining-multiple-logs.md)
   * [Custom output templates](how-to-guides/using-custom-output-templates.md)
+  * [External configuration rules](how-to-guides/external-configuration-rules.md)
 

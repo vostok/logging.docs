@@ -21,3 +21,5 @@ It's preferable to inject log instances explicitly through constructors, either 
 
 Individual log instances \(such as [console log](implementations/console-log.md) or [file log](implementations/file-log.md)\) are typically configured in code by passing a settings object. However, some implementations \(namely [file log](implementations/file-log.md)\) also accept an arbitrary settings provider delegate that can be used to configure from external sources using [Vostok.Configuration](https://vostok.gitbook.io/configuration/) library.
 
+Also, simple filtering and enrichment rules can be supplied from [external configuration](how-to-guides/external-configuration-rules.md).
+
