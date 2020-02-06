@@ -45,6 +45,9 @@ var dynamicallyConfiguredLog = new FileLog(() => ObtainSettings());
           path and gets combined with various suffixes determined by the rolling
           strategy.</p>
         <p></p>
+        <p>Position of the rolling suffix can be customized by inserting a special <code>{RollingSuffix}</code> placeholder
+          somewhere in the file name.</p>
+        <p></p>
         <p>This path is interpreted as relative to current working directory, though
           absolute paths are supported too.</p>
         <p></p>
