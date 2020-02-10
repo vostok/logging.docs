@@ -2,7 +2,7 @@
 
 ### Description
 
-This library provides an intergation with [Serilog](https://serilog.net/) library in the form of an adapter that implements Vostok [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs) interface but internally relies on Serilog implementation.
+This library provides an intergation with [Serilog](https://serilog.net/) library in the form of an adapter that implements Vostok [ILog](https://github.com/vostok/logging.abstractions/blob/master/Vostok.Logging.Abstractions/ILog.cs) interface but internally relies on Serilog implementation. It also provides a sink implementation via [VostokSink](https://github.com/vostok/logging.serilog/blob/master/Vostok.Logging.Serilog/VostokSink.cs).
 
 ### Source and packages
 
