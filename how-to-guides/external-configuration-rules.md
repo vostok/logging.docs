@@ -18,7 +18,8 @@ Every rule contains some of the following:
 | :--- | :--- | :--- | :--- |
 | **Enabled** | `bool` | `true` | Enables/disables the logging in scope of the rule entirely. |
 | **Log** | `string` | `null` | Limits the scope of the rule to the log with given name. If not specified, the rule applies to all logs. |
-| **Source** | `string` | `null` | Limits the scope of the rule to events with source context having given prefix. |
+| **Source** | `string` | `null` | Limits the scope of the rule to events with [source context](../concepts/source-context.md) having given prefix. |
+| **Operation** | `string` | `null` | Limits the scope of the rule to events with [operation context](../concepts/operation-context.md) having given prefix. |
 | **MinimumLevel** | `LogLevel?` | `null` | Sets the minimum log level for the events in scope of the rule. |
 | **Properties** | `Dictionary` | `null` | Adds given set of properties to every event in scope of the rule. |
 

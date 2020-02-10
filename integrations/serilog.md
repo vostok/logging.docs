@@ -16,7 +16,7 @@ It preserves message templates in their original form as Serilog's templating sy
 
 ### VostokSink
 
-`VostokSink` is an implementation of Serilog's `ILogEventSink` interface based on the arbitrary Vostok `ILog` instance.
+`VostokSink` is an implementation of Serilog's `ILogEventSink` interface based on an arbitrary Vostok `ILog` instance.
 
 ```csharp
 var vostokSink = new VostokSink(vostokLog);
