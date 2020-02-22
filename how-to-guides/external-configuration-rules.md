@@ -23,6 +23,17 @@ Every rule contains some of the following:
 | **MinimumLevel** | `LogLevel?` | `null` | Sets the minimum log level for the events in scope of the rule. |
 | **Properties** | `Dictionary` | `null` | Adds given set of properties to every event in scope of the rule. |
 
+There are also some important points to remember when defining rules:
+
+* You should never create two rules with identical scopes \(`Log` + `Source` + `Operation`\). Consider merging them instead.
+* Rules without `Log` scope are evaluated before any log-specific rules are considered.
+* When evaluating whether to log an event, the most specific of the matching rules gets to decide.
+  * A rule with `Source` scope is more specific than a rule without any scope.
+  * A rule with `Operation` scope is more specific than a rule without any scope.
+  * A rule with `Operation` scope is more specific than a rule with `Source` scope.
+  * A rule with `Source + Operation` scope is the most specific one possible.
+* Additional properties are added from all matching rules.
+
 ### Create a ConfigurableLog
 
 ```csharp
