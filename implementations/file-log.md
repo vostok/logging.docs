@@ -105,8 +105,8 @@ var dynamicallyConfiguredLog = new FileLog(() => ObtainSettings());
       <td style="text-align:left"><code>5</code>
       </td>
       <td style="text-align:left">The number of most recent files to keep when using a rolling strategy:
-        older files are automatically removed. Specify a zero or negative value
-        to avoid removing old files.</td>
+        older files are automatically removed. Specify zero value to avoid removing
+        old files.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>Encoding</code>
