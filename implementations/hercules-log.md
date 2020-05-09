@@ -28,5 +28,5 @@ Ensure that provided sink instance is configured with an API key with sufficient
 
 * Prefer to use a singleton instance of `IHerculesSink` everywhere in the application, including `HerculesLog`. Sink instances involve background tasks and are therefore quite expensive.
 
-* Reporting of lost of log events generally dependes on the nature of `IHerculesSink` implementation. Default implementation in [vostok.hercules.client](https://github.com/vostok/hercules.client) repository provides a set of counters for these purposes.
+* Reporting of lost of log events generally depends on the nature of `IHerculesSink` implementation. Default implementation in [vostok.hercules.client](https://github.com/vostok/hercules.client) repository provides a set of counters for these purposes.
 
