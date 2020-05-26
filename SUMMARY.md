@@ -42,6 +42,7 @@
   * [Using static log provider](how-to-guides/using-static-log-provider.md)
   * [Filtering events](how-to-guides/filtering-events-by-level.md)
   * [Enriching events](how-to-guides/enriching-events-with-custom-properties.md)
+  * [Transforming events](how-to-guides/transforming-events.md)
   * [Combining multiple logs](how-to-guides/combining-multiple-logs.md)
   * [Custom output templates](how-to-guides/using-custom-output-templates.md)
   * [External configuration rules](how-to-guides/external-configuration-rules.md)
