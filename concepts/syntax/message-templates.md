@@ -8,7 +8,7 @@ During rendering, placeholders are replaced with values of properties with corre
 
 `Response code = {Code}`  + `{"Code": "200"}` = `Response code = 200` 
 
-Any mismatched brackets are kept as-is: `key}` template renders to the same text.
+Any mismatched brackets are kept as-is: `{key}` template renders to the same text.
 
 Any placeholders without corresponding properties are replaced with empty strings.
 
