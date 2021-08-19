@@ -10,11 +10,13 @@ Output templates can also contain uninterpreted text.
 
 ### Default template
 
-Default output template looks like this:
+Default output template `OutputTemplate.Default` looks like this:
 
 ```text
-{Timestamp} {Level} {TraceContext:w}{OperationContext:w}{SourceContext:w}{Message}{NewLine}{Exception}
+{Timestamp} {Level} {traceContext:w}{operationContext:w}{sourceContext:w}{Message}{NewLine}{Exception}
 ```
+
+Can be acces
 
 See the list of [special properties](special-tokens.md) to understand the bulk of this template's content. 
 
