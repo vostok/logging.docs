@@ -16,8 +16,6 @@ Default output template `OutputTemplate.Default` looks like this:
 {Timestamp} {Level} {traceContext:w}{operationContext:w}{sourceContext:w}{Message}{NewLine}{Exception}
 ```
 
-Can be acces
-
 See the list of [special properties](special-tokens.md) to understand the bulk of this template's content. 
 
 See the sections about [source context](../source-context.md) and [operation context](../operation-context.md) to learn more about corresponding well-known properties mentioned in this template. 
