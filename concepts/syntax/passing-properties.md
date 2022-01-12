@@ -77,3 +77,5 @@ log.Info($"Welcome, {User}. You have {UnreadCount} unread messages.");
 ```
 
 When using this syntax, user is responsible for making sure that new C# 10 features are enabled and Vostok.Logging.Abstractions library targets .NET 6.
+
+[Standard formatters](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated#structure-of-an-interpolated-string) are supported too.
