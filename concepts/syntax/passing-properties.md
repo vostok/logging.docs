@@ -10,7 +10,7 @@ There are three supported ways to pass property values for placeholders in [mess
 log.Info("Welcome, {User}. You have {UnreadCount} unread messages.", "Jenny", 2);
 ```
 
-Property names are inferred from placeholders in message template. 
+Property names are inferred from placeholders in message template.&#x20;
 
 If arguments count exceeds template placeholders count, excess arguments are named with numbers denoting their positions:
 
@@ -22,7 +22,7 @@ log.Info("Welcome, {User}.", "Jenny", "foo", "bar");
 If provided arguments count is not sufficient to account for all template placeholders, the names for existing arguments are still inferred.
 
 {% hint style="info" %}
-Strictly speaking, this approach does not support multiple occurences of the same placeholder name within a message template \(last matched argument wins\):
+Strictly speaking, this approach does not support multiple occurences of the same placeholder name within a message template (last matched argument wins):
 
 ```csharp
 log.Info("Welcome, {name}. {name}, you have {count} unread messages.", 
@@ -39,7 +39,7 @@ log.Info("Welcome, {name}. You have {count} unread messages, {name}.",
 ```
 {% endhint %}
 
-### 
+###
 
 ### 2. Use a single object with named properties:
 
@@ -66,3 +66,14 @@ It also supports multiple occurences of the same placeholder within a single tem
 log.Info("Welcome, {0}. {0}, you have {1} unread messages.", "Jenny", 2);
 ```
 
+### 4. Use interpolated string with C# 10:
+
+```csharp
+var User = "Jenny";
+var UnreadCount = 2;
+log.Info($"Welcome, {User}. You have {UnreadCount} unread messages.");
+// produced message template: "Welcome, {User}. You have {UnreadCount} unread messages."
+// produced event properties: {"User": "Jenny", "UnreadCount": 2}
+```
+
+When using this syntax, user is responsible for making sure that new C# 10 features are enabled and Vostok.Logging.Abstractions library targets .NET 6.
