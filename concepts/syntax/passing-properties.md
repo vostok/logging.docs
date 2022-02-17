@@ -83,3 +83,12 @@ It also supports [standard formatters](https://docs.microsoft.com/en-us/dotnet/c
 ```
 log.Info($"Welcome, {User,10}. You have {UnreadCount:D5} unread messages.");
 ```
+
+If you want to disable automatic properties extraction from interpolated string directly cast it to string:
+
+```
+log.Info($"Welcome, {User}. You have {UnreadCount} unread messages.".ToString());
+log.Info((string)$"Welcome, {User}. You have {UnreadCount} unread messages.");
+```
+
+&#x20;
