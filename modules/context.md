@@ -10,19 +10,26 @@ This library provides an intergation with [Vostok.Context](https://vostok.gitboo
 
 **NuGet package**: [Vostok.Logging.Context](https://www.nuget.org/packages/Vostok.Logging.Context)
 
-```text
+```
 Install-Package Vostok.Logging.Context
 ```
 
 [Cement](https://github.com/skbkontur/cement) users should reference this module with the following command:
 
-```text
+```
 cm ref add vostok.logging.context <path-to-project>
 ```
 
 ### Related pages
 
-{% page-ref page="../concepts/operation-context.md" %}
+{% content-ref url="../concepts/operation-context.md" %}
+[operation-context.md](../concepts/operation-context.md)
+{% endcontent-ref %}
 
-{% page-ref page="../how-to-guides/using-operation-context.md" %}
+{% content-ref url="../how-to-guides/using-operation-context.md" %}
+[using-operation-context.md](../how-to-guides/using-operation-context.md)
+{% endcontent-ref %}
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
