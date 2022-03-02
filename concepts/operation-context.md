@@ -1,6 +1,6 @@
 # Operation context
 
-Operation context represents a hierarchy of logical operations or steps in application code flow \(handling a query, sending a request, performing an iteration of a periodical process\).
+Operation context represents a hierarchy of logical operations or steps in application code flow (handling a query, sending a request, performing an iteration of a periodical process).
 
 Unlike [source context](source-context.md), operation context is bound to current [ExecutionContext](https://docs.microsoft.com/en-us/dotnet/api/system.threading.executioncontext) and can be manipulated independently of any log instances.
 
@@ -72,15 +72,49 @@ using (new OperationContextToken("op1"))
 
 Sample output from this code:
 
-```text
+```
 2019-03-10 01:30:06,727 INFO  [op1] Message 1
 2019-03-10 01:30:06,761 INFO  [op1] [op2] Message 2
 2019-03-10 01:30:06,762 INFO  [op1] [op2] [op3] Message 3
+```
+
+### Placeholders
+
+Operation context value can contain [placeholders](syntax/message-templates.md) filled with property values during rendering:
+
+```
+var log = new SynchronousConsoleLog().WithOperationContext();
+
+using (new OperationContextToken("Handling-{Name}"))
+{
+    log.Info("Hello {Name}!", "Vostok");
+}
+```
+
+Sample output from this code:
+
+```
+2022-03-02 14:41:13,784 INFO  [Handling-Vostok] Hello Vostok!
+```
+
+A property value can be passed using FlowingContext:
+
+```
+var log = new SynchronousConsoleLog().WithOperationContext().WithFlowingContextProperty("Name");
+
+using (new OperationContextToken("Handling-{Name}"))
+{
+    using (FlowingContext.Properties.Use("Name", "Vostok"))
+    {
+        log.Info("Hello {Name}!");    
+    }
+}
 ```
 
 
 
 ### Related pages
 
-{% page-ref page="../how-to-guides/using-operation-context.md" %}
-
+{% content-ref url="../how-to-guides/using-operation-context.md" %}
+[using-operation-context.md](../how-to-guides/using-operation-context.md)
+{% endcontent-ref %}
