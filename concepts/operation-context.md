@@ -82,7 +82,7 @@ Sample output from this code:
 
 Operation context value can contain [placeholders](syntax/message-templates.md) filled with [property values](syntax/passing-properties.md) during rendering:
 
-```
+```clike
 var log = new SynchronousConsoleLog().WithOperationContext();
 var Iteration = 42;
 
