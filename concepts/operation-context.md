@@ -78,37 +78,25 @@ Sample output from this code:
 2019-03-10 01:30:06,762 INFO  [op1] [op2] [op3] Message 3
 ```
 
-### Placeholders
+### Structured logging
 
-Operation context value can contain [placeholders](syntax/message-templates.md) filled with property values during rendering:
+Operation context value can contain [placeholders](syntax/message-templates.md) filled with [property values](syntax/passing-properties.md) during rendering:
 
 ```
 var log = new SynchronousConsoleLog().WithOperationContext();
+var Iteration = 42;
 
-using (new OperationContextToken("Handling-{Name}"))
+using (new OperationContextToken("Iteration-{Iteration}", Iteration))
+// or even new OperationContextToken($"Iteration-{Iteration}") with C# 10
 {
-    log.Info("Hello {Name}!", "Vostok");
+    log.Info("Hello.");
 }
 ```
 
 Sample output from this code:
 
 ```
-2022-03-02 14:41:13,784 INFO  [Handling-Vostok] Hello Vostok!
-```
-
-A property value can be passed using FlowingContext:
-
-```
-var log = new SynchronousConsoleLog().WithOperationContext().WithFlowingContextProperty("Name");
-
-using (new OperationContextToken("Handling-{Name}"))
-{
-    using (FlowingContext.Properties.Use("Name", "Vostok"))
-    {
-        log.Info("Hello {Name}!");    
-    }
-}
+2022-03-03 14:40:19,764 INFO  [Iteration-42] Hello.
 ```
 
 
