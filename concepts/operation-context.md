@@ -97,6 +97,7 @@ Sample output from this code:
 
 ```
 2022-03-03 14:40:19,764 INFO  [Iteration-42] Hello.
+// produced event properties: {"Iteration": 42}
 ```
 
 
