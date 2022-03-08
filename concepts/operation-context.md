@@ -85,8 +85,8 @@ Operation context value can contain [placeholders](syntax/message-templates.md) 
 ```clike
 var log = new SynchronousConsoleLog().WithOperationContext();
 
-var Iteration = 42;
 var Action = "Doing my job";
+var Iteration = 42;
 
 using (new OperationContextToken("{Action}", Action))
     // or 'OperationContextToken($"{Action}")' with C# 10
