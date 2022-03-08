@@ -84,10 +84,14 @@ Operation context value can contain [placeholders](syntax/message-templates.md) 
 
 ```clike
 var log = new SynchronousConsoleLog().WithOperationContext();
-var Iteration = 42;
 
+var Iteration = 42;
+var Action = "Doing my job";
+
+using (new OperationContextToken("{Action}", Action))
+    // or 'OperationContextToken($"{Action}")' with C# 10
 using (new OperationContextToken("Iteration-{Iteration}", Iteration))
-// or even new OperationContextToken($"Iteration-{Iteration}") with C# 10
+    // or 'OperationContextToken($"Iteration-{Iteration}")' with C# 10
 {
     log.Info("Hello.");
 }
@@ -96,8 +100,11 @@ using (new OperationContextToken("Iteration-{Iteration}", Iteration))
 Sample output from this code:
 
 ```
-2022-03-03 14:40:19,764 INFO  [Iteration-42] Hello.
-// produced event properties: {"Iteration": 42}
+2022-03-08 17:09:08,320 INFO  [Doing my job] [Iteration-42] Hello.
+// produced event properties: { 
+//      "Action": "Doing my job", 
+//      "Iteration": 42, 
+//      "operationContext": [ "Doing my job", "Iteration-42" ] }
 ```
 
 
