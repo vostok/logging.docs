@@ -27,6 +27,7 @@
   * [Context](modules/context.md)
   * [Serilog](modules/serilog.md)
   * [Log4net](modules/log4net.md)
+  * [NUnit](modules/nunit.md)
   * [Microsoft](modules/microsoft.md)
 * [Implementations](implementations/README.md)
   * [Silent log](implementations/silent-log.md)
@@ -46,4 +47,3 @@
   * [Combining multiple logs](how-to-guides/combining-multiple-logs.md)
   * [Custom output templates](how-to-guides/using-custom-output-templates.md)
   * [External configuration rules](how-to-guides/external-configuration-rules.md)
-
