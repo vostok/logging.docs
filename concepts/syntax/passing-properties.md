@@ -91,4 +91,20 @@ log.Info($"Welcome, {User}. You have {UnreadCount} unread messages.".ToString())
 log.Info((string)$"Welcome, {User}. You have {UnreadCount} unread messages.");
 ```
 
-&#x20;
+However, in this case you may have performance issues (due to internal templates cache) or corrupted messages (due to rendering stage). See [Message templates](message-templates.md) documentation for details.
+
+For the same reasons, do not pass properties with invalid names (such as function calls). Instead of
+
+```csharp
+log.Info($"Welcome, {User}. You have {Random.Shared.Next()} unread messages.");
+// produced message template: "Welcome, {User}. You have 623653080 unread messages."
+// produced event properties: {"User": "Jenny"}
+```
+
+you should use
+
+```csharp
+log.Info($"Welcome, {User}. You have {{RandomNumber}} unread messages.", Random.Shared.Next());
+// produced message template: "Welcome, {User}. You have {RandomNumber} unread messages."
+// produced event properties: {"User": "Jenny", "RandomNumber": 623653080}
+```
