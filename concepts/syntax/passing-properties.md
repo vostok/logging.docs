@@ -1,6 +1,6 @@
 # Providing property values
 
-There are three supported ways to pass property values for placeholders in [message template](message-templates.md) when using [logging extensions](logging-extensions.md).
+There are several supported ways to pass property values for placeholders in [message template](message-templates.md) when using [logging extensions](logging-extensions.md).
 
 
 
@@ -22,7 +22,7 @@ log.Info("Welcome, {User}.", "Jenny", "foo", "bar");
 If provided arguments count is not sufficient to account for all template placeholders, the names for existing arguments are still inferred.
 
 {% hint style="info" %}
-Strictly speaking, this approach does not support multiple occurences of the same placeholder name within a message template (last matched argument wins):
+Strictly speaking, this approach does not support multiple occurrences of the same placeholder name within a message template (last matched argument wins):
 
 ```csharp
 log.Info("Welcome, {name}. {name}, you have {count} unread messages.", 
@@ -30,7 +30,7 @@ log.Info("Welcome, {name}. {name}, you have {count} unread messages.",
 // The result is: "Welcome, 10. 10, you have  unread messages."
 ```
 
-Although it's safe to use if all duplicate placeholder occurences in the template are located far enough not to get matched to any arguments:
+Although it's safe to use if all duplicate placeholder occurrences in the template are located far enough not to get matched to any arguments:
 
 ```csharp
 log.Info("Welcome, {name}. You have {count} unread messages, {name}.",
@@ -60,7 +60,7 @@ log.Info("Welcome, {0}. You have {1} unread messages.", "Jenny", 2);
 
 Despite being somewhat deprecated nowadays, this syntax enables gradual migration from libraries that do not support structured logging.
 
-It also supports multiple occurences of the same placeholder within a single template:
+It also supports multiple occurrences of the same placeholder within a single template:
 
 ```csharp
 log.Info("Welcome, {0}. {0}, you have {1} unread messages.", "Jenny", 2);
@@ -91,4 +91,26 @@ log.Info($"Welcome, {User}. You have {UnreadCount} unread messages.".ToString())
 log.Info((string)$"Welcome, {User}. You have {UnreadCount} unread messages.");
 ```
 
-&#x20;
+Or disable entirely for you application:
+
+```csharp
+LogExtensions_Interpolated.Enabled = false;
+```
+
+However, in this case you may have performance issues (due to internal templates cache) or corrupted messages (due to rendering stage). See [Message templates](message-templates.md) documentation for details.
+
+For the same reasons, do not pass properties with invalid names (such as function calls). Instead of:
+
+```csharp
+log.Info($"Welcome, {User}. You have {Random.Shared.Next()} unread messages.");
+// produced message template: "Welcome, {User}. You have 623653080 unread messages."
+// produced event properties: {"User": "Jenny"}
+```
+
+you should use:
+
+```csharp
+log.Info($"Welcome, {User}. You have {{RandomNumber}} unread messages.", Random.Shared.Next());
+// produced message template: "Welcome, {User}. You have {RandomNumber} unread messages."
+// produced event properties: {"User": "Jenny", "RandomNumber": 623653080}
+```
