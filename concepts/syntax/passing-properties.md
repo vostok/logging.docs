@@ -91,7 +91,7 @@ log.Info($"Welcome, {User}. You have {UnreadCount} unread messages.".ToString())
 log.Info((string)$"Welcome, {User}. You have {UnreadCount} unread messages.");
 ```
 
-Or disable it entirely for you application:
+Or disable it entirely for your application:
 
 ```csharp
 LogExtensions_Interpolated.Enabled = false;
