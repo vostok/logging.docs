@@ -66,7 +66,7 @@ It also supports multiple occurrences of the same placeholder within a single te
 log.Info("Welcome, {0}. {0}, you have {1} unread messages.", "Jenny", 2);
 ```
 
-### 4. Use interpolated string with C# 10:
+### 4. Use interpolated strings with C# 10:
 
 ```csharp
 var User = "Jenny";
@@ -84,7 +84,7 @@ It also supports [standard formatters](https://docs.microsoft.com/en-us/dotnet/c
 log.Info($"Welcome, {User,10}. You have {UnreadCount:D5} unread messages.");
 ```
 
-If you want to disable automatic properties extraction from interpolated string directly cast it to string:
+If you want to disable automatic properties extraction from an interpolated string directly cast it to the string:
 
 ```
 log.Info($"Welcome, {User}. You have {UnreadCount} unread messages.".ToString());
@@ -97,7 +97,7 @@ Or disable it entirely for your application:
 LogExtensions_Interpolated.Enabled = false;
 ```
 
-However, in this case you may have performance issues (due to internal templates cache) or corrupted messages (due to rendering stage). See [Message templates](message-templates.md) documentation for details.
+However, in this case, you may have performance issues (due to the internal templates cache) or corrupted messages (due to the rendering stage). See [Message templates](message-templates.md) documentation for details.
 
 For the same reasons, do not pass properties with invalid names (such as function calls). Instead of:
 

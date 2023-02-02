@@ -15,9 +15,9 @@ Any placeholders without corresponding properties are replaced with empty string
 Double curly brackets can be used to escape occurrences of curly brackets in text: `{{key}}` template renders to `{key}` text.
 
 {% hint style="warning" %}
-Do not pass message as message template.
+Do not pass a message as a message template.
 
 For example, instead of `log.Info(json)` you should use `log.Info("{Json}", json)`.
 
-Otherwise, you may have performance issues (due to internal templates cache) or corrupted messages (due to rendering stage).
+Otherwise, you may have performance issues (due to the internal templates cache) or corrupted messages (due to the rendering stage).
 {% endhint %}
